@@ -8,20 +8,12 @@ export function Hero() {
   const t = useTranslations('hero');
   return (
     <section className="relative min-h-dvh overflow-hidden bg-forest-900 text-cream-50">
-      {/* Layered gradient — placeholder for hero-bg.jpg until photography exists */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-forest-900 via-forest-700 to-wood-700 opacity-90"
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url(/images/hero-bg.jpg)' }}
         aria-hidden="true"
       />
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 25% 30%, oklch(45% 0.075 60) 0%, transparent 55%), radial-gradient(circle at 80% 75%, oklch(32% 0.045 165) 0%, transparent 50%)',
-        }}
-        aria-hidden="true"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-900/30 via-transparent to-forest-900/80" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-forest-900/50 via-forest-900/20 to-forest-900/80" aria-hidden="true" />
 
       <div className="relative mx-auto flex min-h-dvh max-w-7xl flex-col items-start justify-end px-6 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24">
         <Reveal>

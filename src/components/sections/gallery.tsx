@@ -7,16 +7,7 @@ import { getGallery } from '@/data/gallery';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 
-const GRADIENTS = [
-  'from-forest-700 via-forest-500 to-wood-500',
-  'from-wood-700 via-wood-500 to-cream-200',
-  'from-forest-900 via-forest-700 to-wood-700',
-  'from-wood-500 via-cream-200 to-wood-700',
-  'from-forest-500 via-forest-700 to-forest-900',
-  'from-cream-200 via-wood-500 to-wood-700',
-  'from-wood-700 via-forest-700 to-forest-900',
-  'from-forest-700 via-wood-500 to-wood-700',
-];
+const GRADIENT_FALLBACK = 'from-forest-700 via-forest-500 to-wood-500';
 
 export function Gallery() {
   const t = useTranslations('gallery');
@@ -44,11 +35,16 @@ export function Gallery() {
             <div
               className={cn(
                 'aspect-square w-full overflow-hidden rounded-lg bg-gradient-to-br',
-                GRADIENTS[i % GRADIENTS.length],
+                GRADIENT_FALLBACK,
               )}
-              role="img"
-              aria-label={img.alt[locale]}
-            />
+            >
+              <img
+                src={img.url}
+                alt={img.alt[locale]}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </Reveal>
         ))}
       </div>

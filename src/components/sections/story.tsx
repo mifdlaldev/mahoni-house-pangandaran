@@ -16,16 +16,13 @@ export function Story() {
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <Reveal className="lg:col-span-5">
           <div
-            className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-gradient-to-br from-wood-500/30 via-wood-700/20 to-forest-700/30"
+            className="relative aspect-[4/5] w-full overflow-hidden rounded-lg"
             role="img"
             aria-label="Asep and Lina, owners of Mahoni House"
           >
             <div
-              className="absolute inset-0 opacity-60"
-              style={{
-                backgroundImage:
-                  'radial-gradient(ellipse at 30% 20%, oklch(65% 0.075 75 / 0.55) 0%, transparent 60%), radial-gradient(ellipse at 75% 80%, oklch(45% 0.075 60 / 0.45) 0%, transparent 55%)',
-              }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: 'url(/images/owners.jpg)' }}
               aria-hidden="true"
             />
             <div className="absolute inset-x-0 bottom-0 p-6">
