@@ -33,12 +33,14 @@ export function VillaBento() {
               cell.size === 'wide' && 'sm:col-span-2',
             )}
           >
-            <article className="group relative h-full w-full overflow-hidden rounded-lg bg-wood-200">
+            <article className="group relative h-full w-full overflow-hidden rounded-lg">
               <div
-                className={cn(
-                  'absolute inset-0 bg-gradient-to-br transition-transform duration-500 ease-out group-hover:scale-105',
-                  cell.gradient,
-                )}
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                style={{ backgroundImage: `url(${cell.imageUrl})` }}
+                aria-hidden="true"
+              />
+              <div
+                className={cn('absolute inset-0 bg-gradient-to-br opacity-60', cell.gradient)}
                 aria-hidden="true"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-forest-900/10 to-transparent" />

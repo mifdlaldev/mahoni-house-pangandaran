@@ -36,8 +36,10 @@ export const villa = {
 export type BentoCell = {
   id: string;
   size: 'small' | 'wide' | 'large';
-  /** Tailwind gradient class to use as image placeholder */
+  /** Tailwind gradient class used as fallback background */
   gradient: string;
+  /** Real photo to show behind the gradient overlay */
+  imageUrl: string;
   title: LocalizedString;
   subtitle: LocalizedString;
 };
@@ -47,6 +49,7 @@ export const villaBento: readonly BentoCell[] = [
     id: 'pool',
     size: 'large',
     gradient: 'from-forest-700 via-forest-500 to-wood-700',
+    imageUrl: '/images/gallery/pool-sunset.jpg',
     title: { id: 'Kolam Renang Pribadi', en: 'Private Pool' },
     subtitle: { id: '8 × 4 meter, aman untuk anak', en: '8 × 4 meters, kid-safe' },
   },
@@ -54,6 +57,7 @@ export const villaBento: readonly BentoCell[] = [
     id: 'living',
     size: 'small',
     gradient: 'from-wood-700 via-wood-500 to-cream-200',
+    imageUrl: '/images/gallery/living-room.jpg',
     title: { id: 'Ruang Keluarga', en: 'Living Room' },
     subtitle: { id: 'Sofa panjang, TV 55"', en: 'Long sofa, 55" TV' },
   },
@@ -61,6 +65,7 @@ export const villaBento: readonly BentoCell[] = [
     id: 'kitchen',
     size: 'small',
     gradient: 'from-cream-200 via-wood-500 to-wood-700',
+    imageUrl: '/images/gallery/kitchen.jpg',
     title: { id: 'Dapur Lengkap', en: 'Full Kitchen' },
     subtitle: { id: 'Kompor gas, kulkas, rice cooker', en: 'Gas stove, fridge, rice cooker' },
   },
@@ -68,6 +73,7 @@ export const villaBento: readonly BentoCell[] = [
     id: 'bedroom-master',
     size: 'wide',
     gradient: 'from-forest-900 via-forest-700 to-wood-700',
+    imageUrl: '/images/gallery/master-bedroom.jpg',
     title: { id: 'Kamar Tidur Utama', en: 'Master Bedroom' },
     subtitle: {
       id: 'King bed, AC, kamar mandi dalam',
@@ -78,6 +84,7 @@ export const villaBento: readonly BentoCell[] = [
     id: 'garden',
     size: 'small',
     gradient: 'from-forest-500 via-forest-700 to-forest-900',
+    imageUrl: '/images/gallery/garden.jpg',
     title: { id: 'Taman Tropis', en: 'Tropical Garden' },
     subtitle: {
       id: 'Pohon mahoni setinggi 12 meter',
