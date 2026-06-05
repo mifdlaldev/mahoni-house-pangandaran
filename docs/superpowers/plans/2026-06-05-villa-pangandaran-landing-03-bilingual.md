@@ -9,6 +9,7 @@
 ## Task 3.1: Setup next-intl Config
 
 **Files:**
+
 - Create: `src/i18n/routing.ts`
 - Create: `src/i18n/request.ts`
 - Create: `src/middleware.ts`
@@ -28,8 +29,7 @@ export const routing = defineRouting({
 
 export type Locale = (typeof routing.locales)[number];
 
-export const { Link, redirect, usePathname, useRouter, getPathname } =
-  createNavigation(routing);
+export const { Link, redirect, usePathname, useRouter, getPathname } = createNavigation(routing);
 ```
 
 - [ ] **Step 2: Create src/i18n/request.ts**
@@ -94,6 +94,7 @@ git commit -m "feat: setup next-intl routing and middleware"
 ## Task 3.2: Create id.json Messages
 
 **Files:**
+
 - Create: `src/i18n/messages/id.json`
 
 - [ ] **Step 1: Create Indonesian messages**
@@ -224,6 +225,7 @@ git commit -m "feat: add Indonesian translation messages"
 ## Task 3.3: Create en.json Messages
 
 **Files:**
+
 - Create: `src/i18n/messages/en.json`
 
 - [ ] **Step 1: Create English messages**
@@ -363,6 +365,7 @@ git commit -m "feat: add English translation messages"
 ## Task 3.4: Create LocaleSwitcher Component
 
 **Files:**
+
 - Create: `src/components/shared/locale-switcher.tsx`
 
 - [ ] **Step 1: Create LocaleSwitcher**
@@ -418,6 +421,7 @@ git commit -m "feat: add LocaleSwitcher client component"
 ## Task 3.5: Update Root Layout for i18n
 
 **Files:**
+
 - Delete: `app/layout.tsx`
 - Create: `app/[locale]/layout.tsx`
 - Create: `app/[locale]/page.tsx`
@@ -531,6 +535,7 @@ pnpm dev
 ```
 
 Open:
+
 - http://localhost:3000 → Indonesian
 - http://localhost:3000/en → English
 

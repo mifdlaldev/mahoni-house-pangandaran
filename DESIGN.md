@@ -13,6 +13,7 @@
 ## 🎯 Brand & Feeling
 
 ### Deskripsi singkat
+
 ```
 Landing page bilingual (ID/EN) untuk villa 4-kamar di pesisir barat Pangandaran.
 Dikelola keluarga lokal. Target audiens: keluarga Indonesia + ekspatriat yang
@@ -21,6 +22,7 @@ grounded, dan tidak pretentious.
 ```
 
 ### Referensi brand (vibe yang dicontek)
+
 - **Airbnb Luxe** — photography-first, generous whitespace, editorial copy
 - **Aman Resorts** — restrained luxury, warm earth tones, quiet confidence
 - **Six Senses** — nature-immersed, wellness-adjacent, family-warm
@@ -28,6 +30,7 @@ grounded, dan tidak pretentious.
 - **One Fine Stay** — premium vacation rentals, photography-driven, warm hospitality
 
 ### Target audiens
+
 ```
 Demografi:
   - Indonesia: keluarga urban Jabodetabek + Bandung, 30-50 tahun, middle-to-upper
@@ -54,43 +57,43 @@ Psikografi:
 ```css
 :root {
   /* Forest — Primary brand */
-  --color-forest-900: oklch(20% 0.025 165);   /* #1A2E25 — heading text on cream */
-  --color-forest-700: oklch(32% 0.045 165);   /* #2D4A3E — primary CTA, hero overlay */
-  --color-forest-500: oklch(48% 0.055 165);   /* #4A6B5C — hover, secondary */
-  --color-forest-200: oklch(82% 0.025 165);   /* #C5D3CB — soft accent, dividers */
+  --color-forest-900: oklch(20% 0.025 165); /* #1A2E25 — heading text on cream */
+  --color-forest-700: oklch(32% 0.045 165); /* #2D4A3E — primary CTA, hero overlay */
+  --color-forest-500: oklch(48% 0.055 165); /* #4A6B5C — hover, secondary */
+  --color-forest-200: oklch(82% 0.025 165); /* #C5D3CB — soft accent, dividers */
 
   /* Cream — Background scale */
-  --color-cream-50:  oklch(97% 0.012 85);     /* #F8F4ED — page bg */
-  --color-cream-100: oklch(94% 0.020 85);     /* #F4EDE4 — card bg, alt sections */
-  --color-cream-200: oklch(89% 0.030 85);     /* #E8DCC8 — deeper alt */
+  --color-cream-50: oklch(97% 0.012 85); /* #F8F4ED — page bg */
+  --color-cream-100: oklch(94% 0.02 85); /* #F4EDE4 — card bg, alt sections */
+  --color-cream-200: oklch(89% 0.03 85); /* #E8DCC8 — deeper alt */
 
   /* Wood — Warm accent */
-  --color-wood-500:  oklch(65% 0.075 75);     /* #B8956A — borders, dividers, badges */
-  --color-wood-700:  oklch(45% 0.075 60);     /* #8B6A40 — strong wood, link hover */
+  --color-wood-500: oklch(65% 0.075 75); /* #B8956A — borders, dividers, badges */
+  --color-wood-700: oklch(45% 0.075 60); /* #8B6A40 — strong wood, link hover */
 
   /* Ink — Text scale */
-  --color-ink-900:   oklch(18% 0.008 165);    /* #1A1F1C — body text */
-  --color-ink-600:   oklch(40% 0.012 165);    /* #4A504B — muted text */
-  --color-ink-400:   oklch(60% 0.010 165);    /* #828A82 — disabled, placeholders */
+  --color-ink-900: oklch(18% 0.008 165); /* #1A1F1C — body text */
+  --color-ink-600: oklch(40% 0.012 165); /* #4A504B — muted text */
+  --color-ink-400: oklch(60% 0.01 165); /* #828A82 — disabled, placeholders */
 }
 ```
 
 ### Reference HEX (untuk design tools / handoff)
 
-| Token | HEX | Use case |
-|---|---|---|
-| `forest-900` | `#1A2E25` | Headings, body text on cream |
-| `forest-700` | `#2D4A3E` | Primary CTA, hero text, footer bg |
-| `forest-500` | `#4A6B5C` | Hover state, secondary buttons |
-| `forest-200` | `#C5D3CB` | Soft dividers, badge bg |
-| `cream-50` | `#F8F4ED` | Page background |
-| `cream-100` | `#F4EDE4` | Card background, alt section bg |
-| `cream-200` | `#E8DCC8` | Deeper alt, decorative shapes |
-| `wood-500` | `#B8956A` | Borders, dividers, icon accents |
-| `wood-700` | `#8B6A40` | Hover state for wood, link underline |
-| `ink-900` | `#1A1F1C` | Body text (NOT pure black) |
-| `ink-600` | `#4A504B` | Muted text, captions |
-| `ink-400` | `#828A82` | Placeholders, disabled |
+| Token        | HEX       | Use case                             |
+| ------------ | --------- | ------------------------------------ |
+| `forest-900` | `#1A2E25` | Headings, body text on cream         |
+| `forest-700` | `#2D4A3E` | Primary CTA, hero text, footer bg    |
+| `forest-500` | `#4A6B5C` | Hover state, secondary buttons       |
+| `forest-200` | `#C5D3CB` | Soft dividers, badge bg              |
+| `cream-50`   | `#F8F4ED` | Page background                      |
+| `cream-100`  | `#F4EDE4` | Card background, alt section bg      |
+| `cream-200`  | `#E8DCC8` | Deeper alt, decorative shapes        |
+| `wood-500`   | `#B8956A` | Borders, dividers, icon accents      |
+| `wood-700`   | `#8B6A40` | Hover state for wood, link underline |
+| `ink-900`    | `#1A1F1C` | Body text (NOT pure black)           |
+| `ink-600`    | `#4A504B` | Muted text, captions                 |
+| `ink-400`    | `#828A82` | Placeholders, disabled               |
 
 ### Color Usage Rules
 
@@ -118,9 +121,9 @@ Psikografi:
 ### Font Pairing
 
 ```css
---font-display: 'Lora', Georgia, serif;        /* Warm modern serif */
---font-body: 'Plus Jakarta Sans', sans-serif;  /* Modern geometric sans */
---font-mono: 'JetBrains Mono', monospace;      /* Untuk nomor telepon, kode booking */
+--font-display: 'Lora', Georgia, serif; /* Warm modern serif */
+--font-body: 'Plus Jakarta Sans', sans-serif; /* Modern geometric sans */
+--font-mono: 'JetBrains Mono', monospace; /* Untuk nomor telepon, kode booking */
 ```
 
 ### Font Sources (next/font)
@@ -131,16 +134,16 @@ Psikografi:
 
 ### Type Scale (Mobile-first, clamp-based)
 
-| Token | Mobile | Desktop | Use |
-|---|---|---|---|
-| `text-display-2xl` | 2.5rem / 1.05 | 4rem / 1.0 | Hero h1, max 2 lines |
-| `text-display-xl`  | 2rem / 1.1 | 3rem / 1.05 | Section h2 |
-| `text-display-lg`  | 1.625rem / 1.15 | 2.25rem / 1.1 | Subsection h3 |
-| `text-display-md`  | 1.375rem / 1.2 | 1.75rem / 1.15 | Card h4 |
-| `text-body-lg`     | 1.0625rem / 1.6 | 1.125rem / 1.65 | Lead paragraph |
-| `text-body`        | 1rem / 1.65 | 1rem / 1.7 | Default body |
-| `text-body-sm`     | 0.875rem / 1.55 | 0.9375rem / 1.6 | Captions, meta |
-| `text-eyebrow`     | 0.75rem / 1.4 | 0.8125rem / 1.4 | Uppercase tracked label |
+| Token              | Mobile          | Desktop         | Use                     |
+| ------------------ | --------------- | --------------- | ----------------------- |
+| `text-display-2xl` | 2.5rem / 1.05   | 4rem / 1.0      | Hero h1, max 2 lines    |
+| `text-display-xl`  | 2rem / 1.1      | 3rem / 1.05     | Section h2              |
+| `text-display-lg`  | 1.625rem / 1.15 | 2.25rem / 1.1   | Subsection h3           |
+| `text-display-md`  | 1.375rem / 1.2  | 1.75rem / 1.15  | Card h4                 |
+| `text-body-lg`     | 1.0625rem / 1.6 | 1.125rem / 1.65 | Lead paragraph          |
+| `text-body`        | 1rem / 1.65     | 1rem / 1.7      | Default body            |
+| `text-body-sm`     | 0.875rem / 1.55 | 0.9375rem / 1.6 | Captions, meta          |
+| `text-eyebrow`     | 0.75rem / 1.4   | 0.8125rem / 1.4 | Uppercase tracked label |
 
 > Display sizes menggunakan `clamp(min, vw, max)`. Letter-spacing: -0.04em untuk display, 0.02em untuk eyebrow.
 > Body max-width: **68ch** (1 paragraph ideal reading line).
@@ -169,20 +172,20 @@ Psikografi:
 ### 8-Point Grid
 
 ```css
---space-1:  0.25rem;   /* 4px */
---space-2:  0.5rem;    /* 8px */
---space-3:  0.75rem;   /* 12px */
---space-4:  1rem;      /* 16px */
---space-5:  1.25rem;   /* 20px */
---space-6:  1.5rem;    /* 24px */
---space-8:  2rem;      /* 32px */
---space-10: 2.5rem;    /* 40px */
---space-12: 3rem;      /* 48px */
---space-16: 4rem;      /* 64px */
---space-20: 5rem;      /* 80px */
---space-24: 6rem;      /* 96px */
---space-32: 8rem;      /* 128px */
---space-40: 10rem;     /* 160px */
+--space-1: 0.25rem; /* 4px */
+--space-2: 0.5rem; /* 8px */
+--space-3: 0.75rem; /* 12px */
+--space-4: 1rem; /* 16px */
+--space-5: 1.25rem; /* 20px */
+--space-6: 1.5rem; /* 24px */
+--space-8: 2rem; /* 32px */
+--space-10: 2.5rem; /* 40px */
+--space-12: 3rem; /* 48px */
+--space-16: 4rem; /* 64px */
+--space-20: 5rem; /* 80px */
+--space-24: 6rem; /* 96px */
+--space-32: 8rem; /* 128px */
+--space-40: 10rem; /* 160px */
 ```
 
 ### Spacing Rules
@@ -221,16 +224,16 @@ Psikografi:
 ### Timing
 
 ```css
---duration-fast: 150ms;    /* Hover, focus rings */
---duration-base: 250ms;    /* Default transitions */
---duration-slow: 400ms;    /* Section reveals, page transitions */
+--duration-fast: 150ms; /* Hover, focus rings */
+--duration-base: 250ms; /* Default transitions */
+--duration-slow: 400ms; /* Section reveals, page transitions */
 ```
 
 ### Easing
 
 ```css
---ease-out: cubic-bezier(0.16, 1, 0.3, 1);       /* Entry, default */
---ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);   /* Toggle, expand */
+--ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* Entry, default */
+--ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* Toggle, expand */
 --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* Micro-bounce */
 ```
 
@@ -238,16 +241,16 @@ Psikografi:
 
 > **HANYA animasikan `transform` dan `opacity`.** JANGAN animate `width`, `height`, `top`, `left`.
 
-| Pattern | Property | Duration | Easing |
-|---|---|---|---|
-| Entrance (fade-up) | `translateY(12px)` + `opacity 0 → 1` | 400ms | ease-out |
-| Stagger children | 60ms delay between siblings | — | ease-out |
-| Card hover | `scale(1.02)` | 200ms | ease-out |
-| Button hover | bg color shift | 150ms | ease-out |
-| Button :active | `scale(0.97)` | 100ms | ease-out |
-| Link underline | width 0 → 100% | 200ms | ease-out |
-| Image hover | `scale(1.05)` + slight zoom | 400ms | ease-out |
-| Modal open | `scale(0.95)` + `opacity 0 → 1` | 250ms | ease-spring |
+| Pattern            | Property                             | Duration | Easing      |
+| ------------------ | ------------------------------------ | -------- | ----------- |
+| Entrance (fade-up) | `translateY(12px)` + `opacity 0 → 1` | 400ms    | ease-out    |
+| Stagger children   | 60ms delay between siblings          | —        | ease-out    |
+| Card hover         | `scale(1.02)`                        | 200ms    | ease-out    |
+| Button hover       | bg color shift                       | 150ms    | ease-out    |
+| Button :active     | `scale(0.97)`                        | 100ms    | ease-out    |
+| Link underline     | width 0 → 100%                       | 200ms    | ease-out    |
+| Image hover        | `scale(1.05)` + slight zoom          | 400ms    | ease-out    |
+| Modal open         | `scale(0.95)` + `opacity 0 → 1`      | 250ms    | ease-spring |
 
 ### Scroll Reveal
 
@@ -260,7 +263,9 @@ Psikografi:
 
 ```css
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -359,13 +364,13 @@ Destructive: bg red-700, text white, hover bg red-800
 
 ### Tone per Language
 
-| Aspect | Indonesian | English |
-|---|---|---|
-| Voice | Hangat, sopan, sedikit puitis | Clear, warm, descriptive |
-| Pronouns | "Anda" / "kami" (formal-respectful) | "you" / "we" |
+| Aspect    | Indonesian                                       | English                                      |
+| --------- | ------------------------------------------------ | -------------------------------------------- |
+| Voice     | Hangat, sopan, sedikit puitis                    | Clear, warm, descriptive                     |
+| Pronouns  | "Anda" / "kami" (formal-respectful)              | "you" / "we"                                 |
 | Headlines | Lebih emosional ("Tempat keluarga desacelerasi") | Lebih deskriptif ("Where family slows down") |
-| CTA | "Cek Ketersediaan" / "Pesan Sekarang" | "Check Availability" / "Book Now" |
-| Captions | Lebih panjang, naratif | Lebih ringkas |
+| CTA       | "Cek Ketersediaan" / "Pesan Sekarang"            | "Check Availability" / "Book Now"            |
+| Captions  | Lebih panjang, naratif                           | Lebih ringkas                                |
 
 ### File Structure
 
@@ -447,8 +452,8 @@ Untuk cek vibe dan pattern sebelum coding:
 
 ## 📝 Change Log
 
-| Date | Change | Author |
-|---|---|---|
+| Date       | Change                                                | Author   |
+| ---------- | ----------------------------------------------------- | -------- |
 | 2026-06-05 | Initial design system created from brainstorm session | Sisyphus |
 
 ---

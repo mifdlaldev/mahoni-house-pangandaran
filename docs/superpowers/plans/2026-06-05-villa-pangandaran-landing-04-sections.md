@@ -5,15 +5,17 @@
 > ⚠️ **COMMIT POLICY**: The `git commit` blocks in this plan are **templates** showing the intent of each commit. Per AGENTS.md ("No commit without explicit user request"), the executing agent MUST pause and ask the user before running any `git commit`. Do not commit autonomously.
 
 > 📸 **IMAGE ASSETS**: This plan references image paths like `/images/villa/pool.jpg`, `/images/hero-bg.jpg`, `/images/gallery/*.jpg`, `/images/experience/*.jpg`. **None of these files exist yet.** Before building sections, the executor should EITHER:
+>
 > 1. Source 16-24 CC0 photos from Unsplash (Pangandaran, tropical villa, family, beach, food) and save to `public/images/...`, OR
 > 2. Generate solid-color placeholders matching the section's design tokens (e.g. `wood-200` rectangle for villa bento cells).
-> The build will succeed either way (CSS background-image 404s are non-fatal), but the page will look broken without real images.
+>    The build will succeed either way (CSS background-image 404s are non-fatal), but the page will look broken without real images.
 
 ---
 
 ## Task 4.1: Shared Primitives — Section, Reveal, CtaButton
 
 **Files:**
+
 - Create: `src/components/shared/section.tsx`
 - Create: `src/components/shared/reveal.tsx`
 - Create: `src/components/shared/cta-button.tsx`
@@ -221,6 +223,7 @@ git commit -m "feat: add shared primitives (Section, Reveal, CtaButton, IconWrap
 ## Task 4.2: Navigation Component
 
 **Files:**
+
 - Create: `src/components/sections/nav.tsx`
 
 - [ ] **Step 1: Create Nav with sticky scroll behavior**
@@ -321,6 +324,7 @@ git commit -m "feat: add Nav with sticky scroll + locale switcher"
 ## Task 4.3: Hero Section
 
 **Files:**
+
 - Create: `src/components/sections/hero.tsx`
 
 - [ ] **Step 1: Create Hero section**
@@ -429,6 +433,7 @@ git commit -m "feat: add Hero section with image background and CTAs"
 ## Task 4.4: Story Section
 
 **Files:**
+
 - Create: `src/components/sections/story.tsx`
 
 - [ ] **Step 1: Create Story section**
@@ -525,6 +530,7 @@ git commit -m "feat: add Story section with owners bio"
 ## Task 4.5: Villa Bento Section
 
 **Files:**
+
 - Create: `src/components/sections/villa-bento.tsx`
 
 - [ ] **Step 1: Create Villa Bento grid**
@@ -658,6 +664,7 @@ git commit -m "feat: add Villa Bento section with asymmetric grid"
 ## Task 4.6: Amenities + Layout + Gallery + Experience Sections
 
 **Files:**
+
 - Create: `src/components/sections/amenities.tsx`
 - Create: `src/components/sections/layout.tsx`
 - Create: `src/components/sections/gallery.tsx`
@@ -903,6 +910,7 @@ git commit -m "feat: add Amenities, Layout, Gallery, Experience sections"
 ## Task 4.7: Location + Testimonials + Pricing + FAQ Sections
 
 **Files:**
+
 - Create: `src/components/sections/location.tsx`
 - Create: `src/components/sections/testimonials.tsx`
 - Create: `src/components/sections/pricing.tsx`
@@ -1256,6 +1264,7 @@ git commit -m "feat: add Location, Testimonials, Pricing, FAQ sections"
 ## Task 4.8: Booking Form Section (UI only) + Footer
 
 **Files:**
+
 - Create: `src/components/sections/booking-form.tsx`
 - Create: `src/components/sections/footer.tsx`
 
@@ -1640,6 +1649,7 @@ Expected: all exit 0. No `as any`, no `@ts-ignore`, no empty catch.
 - [ ] **Step 2: Manual visual audit at all 4 breakpoints**
 
 375, 768, 1280, 1920. Check for:
+
 - No horizontal overflow
 - Heading hierarchy (h1 → h6)
 - Font swap working (Lora on headings, Jakarta on body)
@@ -1650,6 +1660,7 @@ Expected: all exit 0. No `as any`, no `@ts-ignore`, no empty catch.
 - [ ] **Step 3: Bilingual spot-check**
 
 Visit `/` (ID) and `/en` (EN). Verify:
+
 - Hero tagline: "Tempat keluarga desacelerasi di tepi laut" vs "Where family slows down by the sea"
 - Section eyebrows change
 - No English/Indonesian mixing
@@ -1664,6 +1675,7 @@ Note: "Phase 4 complete: All 12 sections built, bilingual verified, form UI stub
 ## Task 4.10: Create not-found.tsx (404 page)
 
 **Files:**
+
 - Create: `app/[locale]/not-found.tsx`
 
 - [ ] **Step 1: Create the 404 page**

@@ -9,6 +9,7 @@
 ## Task 1.1: Initialize Next.js Project
 
 **Files:**
+
 - Create: `landing-page-villa-pangandaran/` (project root, current dir)
 
 - [ ] **Step 1: Run create-next-app**
@@ -61,6 +62,7 @@ git commit -m "chore: initialize Next.js 14 project"
 ## Task 1.2: Install Dependencies
 
 **Files:**
+
 - Modify: `package.json`, `pnpm-lock.yaml`
 
 - [ ] **Step 1: Install runtime dependencies**
@@ -94,6 +96,7 @@ git commit -m "chore: add project dependencies (next-intl, framer-motion, RHF, Z
 ## Task 1.3: Configure TypeScript Strict Mode
 
 **Files:**
+
 - Modify: `tsconfig.json`
 
 - [ ] **Step 1: Add strict mode flags to tsconfig.json**
@@ -132,13 +135,14 @@ git commit -m "chore: enable TypeScript strict mode"
 ## Task 1.4: Configure Tailwind 4 with Tropical Modern Tokens
 
 **Files:**
+
 - Modify: `src/app/globals.css` (Tailwind 4 uses `@theme` CSS variables, no `tailwind.config.ts`)
 
 - [ ] **Step 1: Replace src/app/globals.css with @theme tokens**
 
 ```css
 /* src/app/globals.css */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* === Color tokens (OKLCH for perceptual uniformity) === */
@@ -147,13 +151,13 @@ git commit -m "chore: enable TypeScript strict mode"
   --color-forest-500: oklch(48% 0.055 165);
   --color-forest-200: oklch(82% 0.025 165);
   --color-cream-50: oklch(97% 0.012 85);
-  --color-cream-100: oklch(94% 0.020 85);
-  --color-cream-200: oklch(89% 0.030 85);
+  --color-cream-100: oklch(94% 0.02 85);
+  --color-cream-200: oklch(89% 0.03 85);
   --color-wood-500: oklch(65% 0.075 75);
   --color-wood-700: oklch(45% 0.075 60);
   --color-ink-900: oklch(18% 0.008 165);
   --color-ink-600: oklch(40% 0.012 165);
-  --color-ink-400: oklch(60% 0.010 165);
+  --color-ink-400: oklch(60% 0.01 165);
 
   /* === Font families (CSS variables injected by next/font) === */
   --font-display: var(--font-display), Georgia, serif;
@@ -169,18 +173,30 @@ git commit -m "chore: enable TypeScript strict mode"
 }
 
 @keyframes fade-up {
-  0% { opacity: 0; transform: translateY(12px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* === Base layer overrides === */
 @layer base {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-cream-50);
     color: var(--color-ink-900);
@@ -188,12 +204,19 @@ git commit -m "chore: enable TypeScript strict mode"
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     text-wrap: balance;
   }
-  p { text-wrap: pretty; }
+  p {
+    text-wrap: pretty;
+  }
   h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.05;
@@ -213,7 +236,9 @@ git commit -m "chore: enable TypeScript strict mode"
   }
   /* Honor reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -232,11 +257,15 @@ git commit -m "chore: enable TypeScript strict mode"
 }
 
 @media (min-width: 768px) {
-  .container-app { padding-left: 2rem; padding-right: 2rem; }
+  .container-app {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 ```
 
 > 📝 **Tailwind 4 changes from v3**:
+>
 > - No `tailwind.config.ts` (everything is CSS-based via `@theme`)
 > - No `@tailwind base/components/utilities` — single `@import "tailwindcss"`
 > - Content paths auto-detected (no `content` array needed)
@@ -264,6 +293,7 @@ git commit -m "feat: configure Tailwind 4 with Tropical Modern color tokens (OKL
 > 📝 Note: Tokens, base styles, and container utility were consolidated into **Task 1.4** (Tailwind 4 prefers a single `globals.css` with `@theme` block). This task verifies everything actually compiled and is usable.
 
 **Files:**
+
 - Modify (smoke test): `src/app/page.tsx` — temporary Tailwind utility smoke test
 
 - [ ] **Step 1: Smoke-test Tailwind 4 utilities**
@@ -279,12 +309,12 @@ export default function Home() {
         If this renders with forest-green heading and warm-cream background, @theme worked.
       </p>
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <div className="bg-forest-700 text-cream-50 p-4 rounded">forest-700</div>
-        <div className="bg-cream-100 text-ink-900 p-4 rounded">cream-100</div>
-        <div className="bg-wood-500 text-cream-50 p-4 rounded">wood-500</div>
-        <div className="bg-ink-900 text-cream-50 p-4 rounded">ink-900</div>
+        <div className="bg-forest-700 text-cream-50 rounded p-4">forest-700</div>
+        <div className="bg-cream-100 text-ink-900 rounded p-4">cream-100</div>
+        <div className="bg-wood-500 text-cream-50 rounded p-4">wood-500</div>
+        <div className="bg-ink-900 text-cream-50 rounded p-4">ink-900</div>
       </div>
-      <button className="mt-8 rounded bg-forest-700 px-4 py-2 text-cream-50 active:scale-[0.97] transition-transform">
+      <button className="bg-forest-700 text-cream-50 mt-8 rounded px-4 py-2 transition-transform active:scale-[0.97]">
         Test :active state
       </button>
     </main>
@@ -299,6 +329,7 @@ pnpm dev
 ```
 
 Open http://localhost:3000. Confirm:
+
 - [ ] Heading is large, serif, and dark forest-green
 - [ ] Body text is warm cream background, not pure white
 - [ ] Four color swatches render with distinct colors (no missing classes)
@@ -358,6 +389,7 @@ git commit -m "chore: create project folder structure"
 ## Task 1.7: Create cn() Utility with TDD
 
 **Files:**
+
 - Create: `vitest.config.ts`
 - Create: `src/lib/cn.ts`
 - Create: `src/lib/cn.test.ts`
@@ -463,6 +495,7 @@ git commit -m "feat: add cn() utility with tests"
 ## Task 1.8: Configure next/font in Layout
 
 **Files:**
+
 - Modify: `app/layout.tsx`
 
 - [ ] **Step 1: Replace app/layout.tsx**
@@ -522,6 +555,7 @@ git commit -m "feat: configure Lora and Plus Jakarta Sans via next/font"
 ## Task 1.9: Add Prettier Config
 
 **Files:**
+
 - Create: `.prettierrc`
 - Create: `.prettierignore`
 

@@ -13,6 +13,7 @@
 ## Task 2.1: Create types/index.ts
 
 **Files:**
+
 - Create: `src/types/index.ts`
 
 - [ ] **Step 1: Create shared types**
@@ -95,6 +96,7 @@ git commit -m "feat: define shared TypeScript types"
 ## Task 2.2: Create data/villa.ts
 
 **Files:**
+
 - Create: `src/data/villa.ts`
 
 - [ ] **Step 1: Create villa data**
@@ -146,6 +148,7 @@ git commit -m "feat: add fictional villa data (portfolio demo only)"
 ## Task 2.3: Create data/amenities.ts
 
 **Files:**
+
 - Create: `src/data/amenities.ts`
 
 - [ ] **Step 1: Create amenities data**
@@ -218,8 +221,22 @@ export const amenities: readonly Amenity[] = [
 ] as const;
 
 export const secondaryAmenities = {
-  id: ['Parkir 2 mobil', 'Hot water', 'Smart TV', 'Coffee maker', 'Board games', 'Pet-friendly (max 2)'],
-  en: ['2-car parking', 'Hot water', 'Smart TV', 'Coffee maker', 'Board games', 'Pet-friendly (max 2)'],
+  id: [
+    'Parkir 2 mobil',
+    'Hot water',
+    'Smart TV',
+    'Coffee maker',
+    'Board games',
+    'Pet-friendly (max 2)',
+  ],
+  en: [
+    '2-car parking',
+    'Hot water',
+    'Smart TV',
+    'Coffee maker',
+    'Board games',
+    'Pet-friendly (max 2)',
+  ],
 } as const;
 ```
 
@@ -235,6 +252,7 @@ git commit -m "feat: add amenities data (fictional)"
 ## Task 2.4: Create data/pricing.ts
 
 **Files:**
+
 - Create: `src/data/pricing.ts`
 
 - [ ] **Step 1: Create pricing data**
@@ -293,6 +311,7 @@ git commit -m "feat: add pricing tiers data (fictional)"
 ## Task 2.5: Create data/experiences.ts
 
 **Files:**
+
 - Create: `src/data/experiences.ts`
 
 - [ ] **Step 1: Create experiences data**
@@ -377,6 +396,7 @@ git commit -m "feat: add experiences data (fictional)"
 ## Task 2.6: Create data/testimonials.ts
 
 **Files:**
+
 - Create: `src/data/testimonials.ts`
 
 - [ ] **Step 1: Create testimonials data**
@@ -450,6 +470,7 @@ git commit -m "feat: add testimonials data (fictional)"
 ## Task 2.7: Create data/faqs.ts (PLURAL — matches Phase 4 import)
 
 **Files:**
+
 - Create: `src/data/faqs.ts`
 
 - [ ] **Step 1: Create FAQ data**
@@ -543,6 +564,7 @@ git commit -m "feat: add FAQ data (bilingual)"
 ## Task 2.8: Create data/story.ts
 
 **Files:**
+
 - Create: `src/data/story.ts`
 
 - [ ] **Step 1: Create story data**
@@ -588,6 +610,7 @@ git commit -m "feat: add founder story data (fictional)"
 ## Task 2.9: Create data/owners.ts (Story section dependency)
 
 **Files:**
+
 - Create: `src/data/owners.ts`
 
 - [ ] **Step 1: Create owners bio data**
@@ -627,6 +650,7 @@ git commit -m "feat: add owners bio data (fictional)"
 ## Task 2.10: Create data/layout.ts (Layout section dependency)
 
 **Files:**
+
 - Create: `src/data/layout.ts`
 
 - [ ] **Step 1: Create layout data**
@@ -642,7 +666,10 @@ export const villaLayout = {
     {
       id: 'master',
       name: { id: 'Kamar Utama', en: 'Master Bedroom' },
-      specs: { id: 'Lantai 1 · 28 m² · AC · Kamar mandi dalam', en: 'Ground floor · 28 m² · AC · En-suite' },
+      specs: {
+        id: 'Lantai 1 · 28 m² · AC · Kamar mandi dalam',
+        en: 'Ground floor · 28 m² · AC · En-suite',
+      },
       beds: '1 King bed (180×200 cm)',
     },
     {
@@ -683,6 +710,7 @@ git commit -m "feat: add villa layout data (fictional)"
 ## Task 2.11: Create data/gallery.ts (Gallery section dependency)
 
 **Files:**
+
 - Create: `src/data/gallery.ts`
 
 - [ ] **Step 1: Create gallery data**
@@ -691,14 +719,42 @@ git commit -m "feat: add villa layout data (fictional)"
 // FICTIONAL — for portfolio demo only
 // Image paths reference /public/images/gallery/*.jpg
 export const galleryImages = [
-  { id: 'g1', url: '/images/gallery/pool-sunset.jpg', alt: { id: 'Kolam saat sunset', en: 'Pool at sunset' } },
-  { id: 'g2', url: '/images/gallery/living-room.jpg', alt: { id: 'Ruang keluarga', en: 'Living room' } },
-  { id: 'g3', url: '/images/gallery/master-bedroom.jpg', alt: { id: 'Kamar utama', en: 'Master bedroom' } },
+  {
+    id: 'g1',
+    url: '/images/gallery/pool-sunset.jpg',
+    alt: { id: 'Kolam saat sunset', en: 'Pool at sunset' },
+  },
+  {
+    id: 'g2',
+    url: '/images/gallery/living-room.jpg',
+    alt: { id: 'Ruang keluarga', en: 'Living room' },
+  },
+  {
+    id: 'g3',
+    url: '/images/gallery/master-bedroom.jpg',
+    alt: { id: 'Kamar utama', en: 'Master bedroom' },
+  },
   { id: 'g4', url: '/images/gallery/dining.jpg', alt: { id: 'Ruang makan', en: 'Dining area' } },
-  { id: 'g5', url: '/images/gallery/garden.jpg', alt: { id: 'Taman dengan pohon mahoni', en: 'Garden with mahogany tree' } },
-  { id: 'g6', url: '/images/gallery/kitchen.jpg', alt: { id: 'Dapur lengkap', en: 'Full kitchen' } },
-  { id: 'g7', url: '/images/gallery/bbq.jpg', alt: { id: 'Area BBQ outdoor', en: 'Outdoor BBQ area' } },
-  { id: 'g8', url: '/images/gallery/sunrise.jpg', alt: { id: 'Sunrise di teras', en: 'Sunrise from terrace' } },
+  {
+    id: 'g5',
+    url: '/images/gallery/garden.jpg',
+    alt: { id: 'Taman dengan pohon mahoni', en: 'Garden with mahogany tree' },
+  },
+  {
+    id: 'g6',
+    url: '/images/gallery/kitchen.jpg',
+    alt: { id: 'Dapur lengkap', en: 'Full kitchen' },
+  },
+  {
+    id: 'g7',
+    url: '/images/gallery/bbq.jpg',
+    alt: { id: 'Area BBQ outdoor', en: 'Outdoor BBQ area' },
+  },
+  {
+    id: 'g8',
+    url: '/images/gallery/sunrise.jpg',
+    alt: { id: 'Sunrise di teras', en: 'Sunrise from terrace' },
+  },
 ] as const;
 
 export function getGallery() {
@@ -718,6 +774,7 @@ git commit -m "feat: add gallery images data (fictional)"
 ## Task 2.12: Create data/location.ts (Location section dependency)
 
 **Files:**
+
 - Create: `src/data/location.ts`
 
 - [ ] **Step 1: Create location data**
@@ -735,10 +792,22 @@ export const villaLocation = {
   whatsappNumber: '6281234567890', // FICTIONAL placeholder
   landmarks: [
     { id: 'karapyak', name: { id: 'Pantai Karapyak', en: 'Karapyak Beach' }, distance: '5 min' },
-    { id: 'town', name: { id: 'Pusat Kota Pangandaran', en: 'Pangandaran Town Center' }, distance: '10 min' },
-    { id: 'batukaras', name: { id: 'Pantai Batukaras', en: 'Batukaras Beach' }, distance: '30 min' },
+    {
+      id: 'town',
+      name: { id: 'Pusat Kota Pangandaran', en: 'Pangandaran Town Center' },
+      distance: '10 min',
+    },
+    {
+      id: 'batukaras',
+      name: { id: 'Pantai Batukaras', en: 'Batukaras Beach' },
+      distance: '30 min',
+    },
     { id: 'green-canyon', name: { id: 'Green Canyon', en: 'Green Canyon' }, distance: '25 min' },
-    { id: 'citumang', name: { id: 'Body Rafting Citumang', en: 'Citumang Body Rafting' }, distance: '20 min' },
+    {
+      id: 'citumang',
+      name: { id: 'Body Rafting Citumang', en: 'Citumang Body Rafting' },
+      distance: '20 min',
+    },
   ],
 } as const;
 

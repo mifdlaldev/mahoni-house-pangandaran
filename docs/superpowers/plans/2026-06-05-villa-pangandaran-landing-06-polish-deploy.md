@@ -9,6 +9,7 @@
 ## Task 6.1: SEO Metadata (Per-Locale)
 
 **Files:**
+
 - Modify: `app/[locale]/layout.tsx`
 - Create: `app/sitemap.ts`
 - Create: `app/robots.ts`
@@ -137,12 +138,14 @@ pnpm dev
 ```
 
 Visit:
+
 - http://localhost:3000/sitemap.xml → contains both `/id` and `/en` URLs
 - http://localhost:3000/robots.txt → contains sitemap URL
 
 - [ ] **Step 6: Verify metadata**
 
 View page source at `/`:
+
 - `<title>Mahoni House Pangandaran — Villa Keluarga 4-Kamar</title>`
 - `<meta name="description" ...>`
 - `<link rel="alternate" hreflang="id" href=".../id">`
@@ -151,6 +154,7 @@ View page source at `/`:
 - OG and Twitter tags
 
 View at `/en`:
+
 - og:locale is `en_US`
 - canonical points to `/en`
 
@@ -166,6 +170,7 @@ git commit -m "feat: add SEO metadata, sitemap, robots.txt with per-locale alter
 ## Task 6.2: Schema.org LodgingBusiness Markup
 
 **Files:**
+
 - Modify: `app/[locale]/layout.tsx` (or add to `app/[locale]/page.tsx`)
 
 - [ ] **Step 1: Add JSON-LD structured data to page.tsx**
@@ -264,6 +269,7 @@ Open http://localhost:3000 in Chrome.
 DevTools → Lighthouse → Generate report (mobile + desktop).
 
 **Targets:**
+
 - Performance ≥ 90
 - Accessibility ≥ 95
 - Best Practices = 100
@@ -272,7 +278,8 @@ DevTools → Lighthouse → Generate report (mobile + desktop).
 - [ ] **Step 3: Investigate any score < target**
 
 Common fixes:
-- **Performance**: 
+
+- **Performance**:
   - Check `next/image` is used for all `<img>` (especially hero background → move to actual image component or use SVG)
   - Verify font preloading is working (Lora + Jakarta)
   - Check bundle size: `pnpm build` should show first load JS < 100KB
@@ -306,6 +313,7 @@ git commit -m "perf: improve Lighthouse scores to meet target thresholds"
 ## Task 6.4: GitHub Actions CI
 
 **Files:**
+
 - Create: `.github/workflows/ci.yml`
 
 - [ ] **Step 1: Create CI workflow**
@@ -364,11 +372,12 @@ git commit -m "ci: add GitHub Actions workflow (lint, typecheck, test, build)"
 ## Task 6.5: README + Project Documentation
 
 **Files:**
+
 - Create: `README.md`
 
 - [ ] **Step 1: Create README**
 
-```markdown
+````markdown
 # Mahoni House Pangandaran — Landing Page
 
 A bilingual (ID/EN) landing page for a fictional 4-bedroom family villa in Pangandaran, West Java. Built as a portfolio demo with Next.js 14, TypeScript strict, Tailwind, and next-intl.
@@ -401,20 +410,21 @@ pnpm install
 cp .env.example .env.local  # fill in RESEND_API_KEY, OWNER_EMAIL, OWNER_WHATSAPP
 pnpm dev
 ```
+````
 
 Open http://localhost:3000 (ID) or http://localhost:3000/en (EN).
 
 ## Scripts
 
-| Command | Purpose |
-|---|---|
-| `pnpm dev` | Start dev server (Turbopack) |
-| `pnpm build` | Production build |
-| `pnpm start` | Run production build |
-| `pnpm lint` | ESLint check |
-| `pnpm typecheck` | TypeScript strict check |
-| `pnpm test` | Run unit tests (Vitest) |
-| `pnpm test --run` | Run tests once (no watch) |
+| Command           | Purpose                      |
+| ----------------- | ---------------------------- |
+| `pnpm dev`        | Start dev server (Turbopack) |
+| `pnpm build`      | Production build             |
+| `pnpm start`      | Run production build         |
+| `pnpm lint`       | ESLint check                 |
+| `pnpm typecheck`  | TypeScript strict check      |
+| `pnpm test`       | Run unit tests (Vitest)      |
+| `pnpm test --run` | Run tests once (no watch)    |
 
 ## Architecture
 
@@ -435,12 +445,12 @@ src/
 
 ## Environment variables
 
-| Variable | Required | Purpose |
-|---|---|---|
+| Variable               | Required                               | Purpose                         |
+| ---------------------- | -------------------------------------- | ------------------------------- |
 | `NEXT_PUBLIC_SITE_URL` | No (default: `https://mahonihouse.id`) | Used for canonical, OG, sitemap |
-| `RESEND_API_KEY` | No | Email backup for form |
-| `OWNER_EMAIL` | No (default: skip email) | Where booking emails go |
-| `OWNER_WHATSAPP` | No (default: `6281234567890`) | WhatsApp deep link target |
+| `RESEND_API_KEY`       | No                                     | Email backup for form           |
+| `OWNER_EMAIL`          | No (default: skip email)               | Where booking emails go         |
+| `OWNER_WHATSAPP`       | No (default: `6281234567890`)          | WhatsApp deep link target       |
 
 The site works without Resend — it just logs "Email service not configured" and the WhatsApp link still generates.
 
@@ -458,14 +468,15 @@ The CI workflow (`.github/workflows/ci.yml`) runs on every PR and main push.
 ## License
 
 MIT — but please don't use the fictional content (villa name, owner names, pricing) in production.
-```
+
+````
 
 - [ ] **Step 2: Commit**
 
 ```bash
 git add README.md
 git commit -m "docs: add comprehensive README"
-```
+````
 
 ---
 
@@ -512,6 +523,7 @@ Run through the AGENTS.md "Hard Constraints" list:
 - [ ] **Step 3: Bilingual parity check**
 
 Both `/` (ID) and `/en` (EN) must have:
+
 - All 12 sections populated
 - All CTA labels translated
 - No English/Indonesian mixing
@@ -530,6 +542,7 @@ Both `/` (ID) and `/en` (EN) must have:
 - [ ] **Step 5: Performance final check**
 
 Run Lighthouse one more time on production build:
+
 - Performance ≥ 90
 - A11y ≥ 95
 - Best Practices = 100
@@ -598,12 +611,12 @@ Watch `.github/workflows/ci.yml` run on first push. All jobs should pass.
 
 In Vercel → Settings → Environment Variables:
 
-| Key | Value | Scope |
-|---|---|---|
+| Key                    | Value                                                            | Scope               |
+| ---------------------- | ---------------------------------------------------------------- | ------------------- |
 | `NEXT_PUBLIC_SITE_URL` | `https://mahoni-house-pangandaran.vercel.app` (or custom domain) | Production, Preview |
-| `RESEND_API_KEY` | (your Resend API key — optional) | Production |
-| `OWNER_EMAIL` | (your email — optional) | Production |
-| `OWNER_WHATSAPP` | (real WA number with country code, no `+`) | Production |
+| `RESEND_API_KEY`       | (your Resend API key — optional)                                 | Production          |
+| `OWNER_EMAIL`          | (your email — optional)                                          | Production          |
+| `OWNER_WHATSAPP`       | (real WA number with country code, no `+`)                       | Production          |
 
 - [ ] **Step 3: Deploy**
 
@@ -612,6 +625,7 @@ Click "Deploy". Wait ~90s.
 - [ ] **Step 4: Verify production**
 
 Open the deployed URL:
+
 - Homepage renders
 - `/en` works
 - Locale switcher toggles
@@ -649,6 +663,7 @@ Note: "Phase 6 complete: SEO + Schema.org + CI + Vercel deploy. Lighthouse targe
 - [ ] **Step 4: Handoff to user**
 
 Summarize for user:
+
 - Deployed URL
 - GitHub repo URL
 - All commits

@@ -73,20 +73,20 @@ Pola desain yang dicontek (bukan cloned): Airbnb Luxe, Aman Resorts, Six Senses,
 
 ### 2.1 Section Purposes
 
-| # | Section | Primary purpose | Secondary purpose |
-|---|---|---|---|
-| 1 | Hero | Capture attention, communicate value | Drive to check availability |
-| 2 | Story | Build emotional connection | Differentiate from competitors |
-| 3 | Villa (bento) | Visual showcase of key spaces | Trigger desire |
-| 4 | Amenities | Communicate practical features | Address "what's included" |
-| 5 | Layout | Answer "fits my group size?" | Set expectations |
-| 6 | Gallery | Deep visual exploration | Build trust via realness |
-| 7 | Experience | Show location value | Justify trip to Pangandaran |
-| 8 | Location | Provide logistics | Reduce booking anxiety |
-| 9 | Testimonials | Social proof | Reduce risk perception |
-| 10 | Pricing | Set expectations | Filter serious inquiries |
-| 11 | FAQ | Objection handling | Save back-and-forth on WhatsApp |
-| 12 | Booking Form | Convert | Capture lead info |
+| #   | Section       | Primary purpose                      | Secondary purpose               |
+| --- | ------------- | ------------------------------------ | ------------------------------- |
+| 1   | Hero          | Capture attention, communicate value | Drive to check availability     |
+| 2   | Story         | Build emotional connection           | Differentiate from competitors  |
+| 3   | Villa (bento) | Visual showcase of key spaces        | Trigger desire                  |
+| 4   | Amenities     | Communicate practical features       | Address "what's included"       |
+| 5   | Layout        | Answer "fits my group size?"         | Set expectations                |
+| 6   | Gallery       | Deep visual exploration              | Build trust via realness        |
+| 7   | Experience    | Show location value                  | Justify trip to Pangandaran     |
+| 8   | Location      | Provide logistics                    | Reduce booking anxiety          |
+| 9   | Testimonials  | Social proof                         | Reduce risk perception          |
+| 10  | Pricing       | Set expectations                     | Filter serious inquiries        |
+| 11  | FAQ           | Objection handling                   | Save back-and-forth on WhatsApp |
+| 12  | Booking Form  | Convert                              | Capture lead info               |
 
 ---
 
@@ -153,6 +153,7 @@ Dev:
 ### 3.3 Recommended: Phosphor React
 
 Pilih **Phosphor React** sebagai icon library:
+
 - Lebih warm/humanistic dari Lucide
 - Regular weight works well dengan Tropical Modern
 - Family of 6 weights (thin, light, regular, bold, fill, duotone)
@@ -281,7 +282,7 @@ export const villa = {
   built: 2021,
   area: {
     building: 250, // m²
-    garden: 800,   // m²
+    garden: 800, // m²
   },
   capacity: {
     maxGuests: 10,
@@ -311,16 +312,17 @@ export const villa = {
 
 6 amenities utama (visual, dengan Phosphor icons):
 
-| ID | ID Label | EN Label | Icon | Category |
-|---|---|---|---|---|
-| pool | Kolam Renang Pribadi | Private Pool | `SwimmingPool` | Outdoor |
-| kitchen | Dapur Lengkap | Full Kitchen | `CookingPot` | Indoor |
-| garden | Taman Tropis | Tropical Garden | `Plant` | Outdoor |
-| wifi | WiFi 100 Mbps | 100 Mbps WiFi | `WifiHigh` | Tech |
-| ac | AC di Semua Kamar | AC in All Rooms | `Snowflake` | Comfort |
-| bbq | Area BBQ | BBQ Area | `Barbecue` | Outdoor |
+| ID      | ID Label             | EN Label        | Icon           | Category |
+| ------- | -------------------- | --------------- | -------------- | -------- |
+| pool    | Kolam Renang Pribadi | Private Pool    | `SwimmingPool` | Outdoor  |
+| kitchen | Dapur Lengkap        | Full Kitchen    | `CookingPot`   | Indoor   |
+| garden  | Taman Tropis         | Tropical Garden | `Plant`        | Outdoor  |
+| wifi    | WiFi 100 Mbps        | 100 Mbps WiFi   | `WifiHigh`     | Tech     |
+| ac      | AC di Semua Kamar    | AC in All Rooms | `Snowflake`    | Comfort  |
+| bbq     | Area BBQ             | BBQ Area        | `Barbecue`     | Outdoor  |
 
 Plus secondary amenities (small text, lower in section):
+
 - Parking (2 cars)
 - Pet-friendly (max 2 small pets)
 - Hot water
@@ -357,7 +359,13 @@ export const pricing = {
     },
   ],
   includes: {
-    id: ['Wifi 100 Mbps', 'Handuk & linen', 'Dapur lengkap', 'Parkir 2 mobil', 'Pembersihan harian'],
+    id: [
+      'Wifi 100 Mbps',
+      'Handuk & linen',
+      'Dapur lengkap',
+      'Parkir 2 mobil',
+      'Pembersihan harian',
+    ],
     en: ['100 Mbps WiFi', 'Towels & linens', 'Full kitchen', '2-car parking', 'Daily housekeeping'],
   },
   excludes: {
@@ -371,14 +379,14 @@ export const pricing = {
 
 6 nearby activities dengan distances:
 
-| Activity | Distance | ID Description | EN Description |
-|---|---|---|---|
-| Sunset di Karapyak | 5 min | Pantai tersembunyi untuk sunset tanpa keramaian | Hidden beach for crowd-free sunset |
-| Body Rafting Citumang | 20 min | Arung jeram ringan yang cocok untuk keluarga | Gentle rafting suitable for families |
-| Green Canyon | 25 min | Sungai emerald di tebing kapur | Emerald river through limestone cliffs |
-| Surf Batukaras | 30 min | Kelas selancar untuk pemula & lanjutan | Surf lessons for beginners & advanced |
-| Pasar Pangandaran | 10 min | Pasar lokal untuk oleh-oleh & jajanan | Local market for souvenirs & snacks |
-| Taman Wisata Alam | 15 min | Cagar alam dengan monyet & kera | Nature reserve with monkeys & apes |
+| Activity              | Distance | ID Description                                  | EN Description                         |
+| --------------------- | -------- | ----------------------------------------------- | -------------------------------------- |
+| Sunset di Karapyak    | 5 min    | Pantai tersembunyi untuk sunset tanpa keramaian | Hidden beach for crowd-free sunset     |
+| Body Rafting Citumang | 20 min   | Arung jeram ringan yang cocok untuk keluarga    | Gentle rafting suitable for families   |
+| Green Canyon          | 25 min   | Sungai emerald di tebing kapur                  | Emerald river through limestone cliffs |
+| Surf Batukaras        | 30 min   | Kelas selancar untuk pemula & lanjutan          | Surf lessons for beginners & advanced  |
+| Pasar Pangandaran     | 10 min   | Pasar lokal untuk oleh-oleh & jajanan           | Local market for souvenirs & snacks    |
+| Taman Wisata Alam     | 15 min   | Cagar alam dengan monyet & kera                 | Nature reserve with monkeys & apes     |
 
 ### 5.5 Testimonials (`src/data/testimonials.ts`)
 
@@ -823,7 +831,7 @@ Each card (3):
   - Includes list (5 items, checkmark icon)
   - CTA: "Book Weekday →" (anchor to #booking with pre-fill)
 
-Visual differentiation: 
+Visual differentiation:
   - Weekday: standard card
   - Weekend: standard card
   - Peak: "Most Popular" badge, slight elevation, forest-700 border
@@ -934,25 +942,31 @@ Bottom bar:
 ```typescript
 // src/lib/whatsapp.ts
 export function generateWhatsAppMessage(data: BookingFormData, locale: 'id' | 'en'): string {
-  const greeting = locale === 'id' ? 'Halo, saya ingin cek ketersediaan' : 'Hi, I would like to check availability';
-  const fields = locale === 'id' ? {
-    checkIn: 'Check-in',
-    checkOut: 'Check-out',
-    guests: 'Jumlah tamu',
-    name: 'Nama',
-    email: 'Email',
-    phone: 'No. WhatsApp',
-    requests: 'Permintaan khusus',
-  } : {
-    checkIn: 'Check-in',
-    checkOut: 'Check-out',
-    guests: 'Guests',
-    name: 'Name',
-    email: 'Email',
-    phone: 'WhatsApp',
-    requests: 'Special requests',
-  };
-  
+  const greeting =
+    locale === 'id'
+      ? 'Halo, saya ingin cek ketersediaan'
+      : 'Hi, I would like to check availability';
+  const fields =
+    locale === 'id'
+      ? {
+          checkIn: 'Check-in',
+          checkOut: 'Check-out',
+          guests: 'Jumlah tamu',
+          name: 'Nama',
+          email: 'Email',
+          phone: 'No. WhatsApp',
+          requests: 'Permintaan khusus',
+        }
+      : {
+          checkIn: 'Check-in',
+          checkOut: 'Check-out',
+          guests: 'Guests',
+          name: 'Name',
+          email: 'Email',
+          phone: 'WhatsApp',
+          requests: 'Special requests',
+        };
+
   return [
     greeting,
     '',
@@ -965,7 +979,9 @@ export function generateWhatsAppMessage(data: BookingFormData, locale: 'id' | 'e
     data.requests ? `${fields.requests}: ${data.requests}` : '',
     '',
     locale === 'id' ? 'Terima kasih!' : 'Thank you!',
-  ].filter(Boolean).join('\n');
+  ]
+    .filter(Boolean)
+    .join('\n');
 }
 
 export function generateWhatsAppLink(message: string, phone: string): string {
@@ -982,11 +998,13 @@ export function generateWhatsAppLink(message: string, phone: string): string {
 import { Resend } from 'resend';
 import { z } from 'zod';
 
-const schema = z.object({ /* same as client */ });
+const schema = z.object({
+  /* same as client */
+});
 
 export async function submitBookingForm(data: z.infer<typeof schema>) {
   const validated = schema.parse(data);
-  
+
   // Send email to owner
   const resend = new Resend(process.env.RESEND_API_KEY);
   await resend.emails.send({
@@ -995,7 +1013,7 @@ export async function submitBookingForm(data: z.infer<typeof schema>) {
     subject: `New Booking Inquiry: ${validated.name}`,
     html: `<pre>${JSON.stringify(validated, null, 2)}</pre>`,
   });
-  
+
   return { success: true };
 }
 ```
@@ -1090,6 +1108,7 @@ export function LocaleSwitcher({ currentLocale }: { currentLocale: 'id' | 'en' }
 ```
 
 **Key rules**:
+
 - Same keys in both files (enforced via TypeScript)
 - No mixed language in one file
 - Translations from `data/*.ts` use `{id, en}` object structure
@@ -1161,9 +1180,11 @@ const jakarta = Plus_Jakarta_Sans({
 6 phases, each independently verifiable.
 
 ### Phase 1: Foundation
+
 **Goal**: Project initialized, runnable, design system applied.
 
 Tasks:
+
 1. `pnpm create next-app@14` with TypeScript, Tailwind, App Router, no src/ use src/ instead
 2. Install all dependencies (next-intl, framer-motion, react-hook-form, zod, leaflet, phosphor-react, etc.)
 3. Configure `tsconfig.json` strict mode
@@ -1175,15 +1196,18 @@ Tasks:
 9. Verify: `pnpm dev` runs, blank page with correct fonts + colors
 
 **DoD**:
+
 - [ ] `pnpm dev` jalan tanpa error
 - [ ] Tailwind config loaded, color tokens work
 - [ ] Fonts loaded (Lora + Jakarta)
 - [ ] No TS errors, no ESLint warnings
 
 ### Phase 2: Content Data Layer
+
 **Goal**: All fictional data typed and accessible.
 
 Tasks:
+
 1. Create all `src/data/*.ts` files per section 5
 2. Type each with `as const` for literal types
 3. Add JSDoc to each export
@@ -1191,14 +1215,17 @@ Tasks:
 5. Verify: TS compile clean, all data exportable
 
 **DoD**:
+
 - [ ] All data files compile
 - [ ] All exports strictly typed
 - [ ] Marked as fictional
 
 ### Phase 3: Bilingual Foundation
+
 **Goal**: Locale routing works, messages loadable.
 
 Tasks:
+
 1. Setup `next-intl` per spec section 8
 2. Create `id.json` + `en.json` with all UI strings (nav, buttons, section titles)
 3. Create `src/i18n/routing.ts` and `request.ts`
@@ -1207,14 +1234,17 @@ Tasks:
 6. Verify: Visit `/` shows ID, `/en` shows EN, switcher toggles
 
 **DoD**:
+
 - [ ] `/` and `/en` routes work
 - [ ] Switcher toggles language
 - [ ] No hardcoded strings in components
 
 ### Phase 4: Sections (Build per AGENTS.md verify rule)
+
 **Goal**: All 12 sections built and verified.
 
 Tasks (one section at a time, verify per AGENTS.md section rule):
+
 1. Hero → screenshot 4 viewports → verify
 2. Story → verify
 3. Villa (bento) → verify
@@ -1230,6 +1260,7 @@ Tasks (one section at a time, verify per AGENTS.md section rule):
 13. Nav + Footer → verify
 
 **DoD per section**:
+
 - [ ] No horizontal overflow at 375px
 - [ ] All breakpoints work
 - [ ] Animations respect `prefers-reduced-motion`
@@ -1237,9 +1268,11 @@ Tasks (one section at a time, verify per AGENTS.md section rule):
 - [ ] Visual matches DESIGN.md
 
 ### Phase 5: Form + WhatsApp Integration
+
 **Goal**: Form submits to WhatsApp + email backup.
 
 Tasks:
+
 1. Create `src/lib/whatsapp.ts` (generate message + link)
 2. Create `src/lib/validators.ts` (Zod schema for booking form)
 3. Build `BookingForm` client component with RHF + Zod
@@ -1249,6 +1282,7 @@ Tasks:
 7. Test: Submit form locally, verify WA link + email received
 
 **DoD**:
+
 - [ ] Form validates all fields
 - [ ] Error messages clear
 - [ ] WA link opens with correct message
@@ -1256,9 +1290,11 @@ Tasks:
 - [ ] No secrets in code
 
 ### Phase 6: Polish + Final QA
+
 **Goal**: Production-ready, polished, fast.
 
 Tasks:
+
 1. Add scroll-reveal Intersection Observer to all sections
 2. Add `prefers-reduced-motion` CSS
 3. Run Lighthouse audit (target scores per section 10.1)
@@ -1274,6 +1310,7 @@ Tasks:
 13. Verify live site
 
 **DoD**:
+
 - [ ] Lighthouse scores meet budget
 - [ ] No horizontal overflow anywhere
 - [ ] a11y clean (keyboard nav, screen reader, contrast)
@@ -1301,13 +1338,13 @@ Tasks:
 
 ## 13. Risks & Mitigations
 
-| Risk | Impact | Mitigation |
-|---|---|---|
-| Fictional data mistaken for real | High | Clear "FICTIONAL — demo only" disclaimers in code, AGENTS.md, and visible on site footer |
-| Lighthouse scores below target | Medium | Phase 6 dedicated to perf, all images optimized, no heavy libs |
-| next-intl App Router quirks | Medium | Pin to v3.x (proven with App Router), reference official docs |
-| Leaflet bundle size | Low | Dynamic import, fallback to iframe |
-| Bilingual content drift | Medium | TypeScript-enforced same keys, lint check for missing keys |
+| Risk                             | Impact | Mitigation                                                                               |
+| -------------------------------- | ------ | ---------------------------------------------------------------------------------------- |
+| Fictional data mistaken for real | High   | Clear "FICTIONAL — demo only" disclaimers in code, AGENTS.md, and visible on site footer |
+| Lighthouse scores below target   | Medium | Phase 6 dedicated to perf, all images optimized, no heavy libs                           |
+| next-intl App Router quirks      | Medium | Pin to v3.x (proven with App Router), reference official docs                            |
+| Leaflet bundle size              | Low    | Dynamic import, fallback to iframe                                                       |
+| Bilingual content drift          | Medium | TypeScript-enforced same keys, lint check for missing keys                               |
 
 ---
 

@@ -34,6 +34,7 @@ This plan is split into 6 phase files for manageability. Read in order:
 **Commits**: The plan includes `git commit` after each task as a documentation template. **However, per AGENTS.md ("No commit without explicit user request"), the executing agent MUST pause and ask the user for approval before each commit.** Do not run `git commit` autonomously. This is a hard constraint from the project context.
 
 **Tropical Modern design constraints** (per DESIGN.md):
+
 - Fonts: Lora (display) + Plus Jakarta Sans (body). NO Inter, NO Fraunces.
 - Colors: forest-700 primary, cream-50/100 backgrounds, wood-500 accent, ink-900 text. NO pure black/white.
 - Animations: only transform + opacity. Respect `prefers-reduced-motion`.
@@ -44,14 +45,14 @@ This plan is split into 6 phase files for manageability. Read in order:
 
 ## Phase Summary
 
-| Phase | Tasks | Output |
-|---|---|---|
-| 1. Foundation | 10 | Next.js 15 project with TS strict, Tailwind, tokens, fonts, cn utility |
-| 2. Content Data | 12 | 11 typed data files + types (villa, amenities, pricing, experiences, testimonials, faqs, story, owners, layout, gallery, location) |
-| 3. Bilingual | 6 | next-intl v4 routing, ID+EN messages, LocaleSwitcher, locale-aware layout |
-| 4. Sections | 10 | 12 sections + Nav + Footer + not-found + Section/Reveal/CtaButton/Map primitives |
-| 5. Form Integration | 6 | Format utils (TDD), Validators, WhatsApp link, Server Action email, full form submit |
-| 6. Polish & Deploy | 9 | Metadata, SEO, Schema.org, Lighthouse audit, Vercel deploy |
+| Phase               | Tasks | Output                                                                                                                             |
+| ------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Foundation       | 10    | Next.js 15 project with TS strict, Tailwind, tokens, fonts, cn utility                                                             |
+| 2. Content Data     | 12    | 11 typed data files + types (villa, amenities, pricing, experiences, testimonials, faqs, story, owners, layout, gallery, location) |
+| 3. Bilingual        | 6     | next-intl v4 routing, ID+EN messages, LocaleSwitcher, locale-aware layout                                                          |
+| 4. Sections         | 10    | 12 sections + Nav + Footer + not-found + Section/Reveal/CtaButton/Map primitives                                                   |
+| 5. Form Integration | 6     | Format utils (TDD), Validators, WhatsApp link, Server Action email, full form submit                                               |
+| 6. Polish & Deploy  | 9     | Metadata, SEO, Schema.org, Lighthouse audit, Vercel deploy                                                                         |
 
 **Total: 53 tasks across 6 phases.**
 

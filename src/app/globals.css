@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* === Tropical Modern Design Tokens (OKLCH) === */
 @theme {
@@ -8,13 +8,13 @@
   --color-forest-500: oklch(48% 0.055 165);
   --color-forest-200: oklch(82% 0.025 165);
   --color-cream-50: oklch(97% 0.012 85);
-  --color-cream-100: oklch(94% 0.020 85);
-  --color-cream-200: oklch(89% 0.030 85);
+  --color-cream-100: oklch(94% 0.02 85);
+  --color-cream-200: oklch(89% 0.03 85);
   --color-wood-500: oklch(65% 0.075 75);
   --color-wood-700: oklch(45% 0.075 60);
   --color-ink-900: oklch(18% 0.008 165);
   --color-ink-600: oklch(40% 0.012 165);
-  --color-ink-400: oklch(60% 0.010 165);
+  --color-ink-400: oklch(60% 0.01 165);
 
   /* === Font families ===
    * These are FALLBACK chains. next/font will override at runtime
@@ -22,8 +22,8 @@
    *   lora = Lora({ variable: '--font-display' })
    *   jakarta = Plus_Jakarta_Sans({ variable: '--font-body' })
    */
-  --font-display: "Lora", Georgia, serif;
-  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: 'Lora', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
 
   /* === Max widths === */
   --max-width-prose: 68ch;
@@ -35,18 +35,30 @@
 }
 
 @keyframes fade-up {
-  0% { opacity: 0; transform: translateY(12px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* === Base layer overrides === */
 @layer base {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-cream-50);
     color: var(--color-ink-900);
@@ -54,12 +66,19 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     text-wrap: balance;
   }
-  p { text-wrap: pretty; }
+  p {
+    text-wrap: pretty;
+  }
   h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.05;
@@ -79,7 +98,9 @@
   }
   /* Honor reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -98,5 +119,8 @@
 }
 
 @media (min-width: 768px) {
-  .container-app { padding-left: 2rem; padding-right: 2rem; }
+  .container-app {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

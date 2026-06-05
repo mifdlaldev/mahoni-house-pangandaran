@@ -9,6 +9,7 @@
 ## Task 5.1: Format Utilities (TDD)
 
 **Files:**
+
 - Create: `src/lib/__tests__/format.test.ts`
 - Create: `src/lib/format.ts`
 
@@ -75,10 +76,7 @@ export function formatIDR(value: number): string {
     .replace('Rp\u00a0', 'Rp ');
 }
 
-export function formatDate(
-  isoDate: string,
-  locale: 'id' | 'en',
-): string {
+export function formatDate(isoDate: string, locale: 'id' | 'en'): string {
   return new Intl.DateTimeFormat(locale === 'id' ? 'id-ID' : 'en-US', {
     day: 'numeric',
     month: 'short',
@@ -114,6 +112,7 @@ git commit -m "test: add format utilities with TDD (IDR, date, phone)"
 ## Task 5.2: Booking Validators (TDD)
 
 **Files:**
+
 - Create: `src/lib/__tests__/booking-validators.test.ts`
 - Create: `src/lib/booking-validators.ts`
 
@@ -219,31 +218,20 @@ export const bookingSchema = z
       .string()
       .min(1, 'Check-in wajib diisi')
       .refine((v) => v >= todayISO(), 'Check-in tidak boleh di masa lalu'),
-    checkOut: z
-      .string()
-      .min(1, 'Check-out wajib diisi'),
+    checkOut: z.string().min(1, 'Check-out wajib diisi'),
     guests: z
       .number({ invalid_type_error: 'Jumlah tamu harus angka' })
       .int()
       .min(1, 'Minimal 1 tamu')
       .max(10, 'Maksimal 10 tamu'),
-    name: z
-      .string()
-      .min(2, 'Nama minimal 2 karakter')
-      .max(100, 'Nama maksimal 100 karakter'),
-    email: z
-      .string()
-      .email('Format email tidak valid'),
+    name: z.string().min(2, 'Nama minimal 2 karakter').max(100, 'Nama maksimal 100 karakter'),
+    email: z.string().email('Format email tidak valid'),
     phone: z
       .string()
       .min(8, 'No. WhatsApp tidak valid')
       .max(20, 'No. WhatsApp terlalu panjang')
       .regex(/^[\d+\s-]+$/, 'Hanya boleh angka, spasi, +, -'),
-    requests: z
-      .string()
-      .max(500, 'Permintaan maksimal 500 karakter')
-      .optional()
-      .default(''),
+    requests: z.string().max(500, 'Permintaan maksimal 500 karakter').optional().default(''),
     agreement: z
       .union([z.literal('on'), z.literal('true'), z.boolean()])
       .refine((v) => v === true || v === 'on' || v === 'true', {
@@ -278,6 +266,7 @@ git commit -m "test: add booking form validators with Zod (TDD)"
 ## Task 5.3: WhatsApp Message Generator (TDD)
 
 **Files:**
+
 - Create: `src/lib/__tests__/whatsapp.test.ts`
 - Create: `src/lib/whatsapp.ts`
 
@@ -430,6 +419,7 @@ git commit -m "test: add WhatsApp message + link generator (TDD)"
 ## Task 5.4: Server Action with Validation + Email Backup
 
 **Files:**
+
 - Modify: `src/app/actions/booking.ts`
 - Create: `src/lib/email.ts`
 
@@ -465,7 +455,9 @@ type SendArgs = {
   locale: 'id' | 'en';
 };
 
-export async function sendBookingEmail(args: SendArgs): Promise<{ sent: boolean; reason?: string }> {
+export async function sendBookingEmail(
+  args: SendArgs,
+): Promise<{ sent: boolean; reason?: string }> {
   if (!apiKey || !ownerEmail) {
     return { sent: false, reason: 'Email service not configured' };
   }
@@ -516,9 +508,7 @@ type ActionResult =
 
 const OWNER_PHONE = process.env.OWNER_WHATSAPP ?? '6281234567890';
 
-export async function submitBooking(
-  formData: FormData,
-): Promise<ActionResult> {
+export async function submitBooking(formData: FormData): Promise<ActionResult> {
   // 1. Parse FormData → plain object
   const raw = {
     checkIn: formData.get('checkIn')?.toString() ?? '',
@@ -592,6 +582,7 @@ git commit -m "feat: add booking Server Action with Zod validation + email backu
 ## Task 5.5: Wire Form to Action with Client-Side Handling
 
 **Files:**
+
 - Modify: `src/components/sections/booking-form.tsx`
 
 - [ ] **Step 1: Update BookingForm to use the action result**
