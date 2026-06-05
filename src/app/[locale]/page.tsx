@@ -38,7 +38,7 @@ export default async function HomePage({
         <Testimonials />
         <Pricing />
         <FAQ />
-        <BookingForm />
+        <BookingForm locale={locale as 'id' | 'en'} />
       </main>
       <Footer />
     </>
