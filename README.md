@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mahoni House Pangandaran — Landing Page
 
-## Getting Started
+A bilingual (ID/EN) landing page for a fictional 4-bedroom family villa in Pangandaran, West Java. Built as a portfolio demo with Next.js 15, TypeScript strict, Tailwind, and next-intl v4.
 
-First, run the development server:
+> **Demo project**: This is a portfolio piece. The villa, owners, pricing, and testimonials are fictional.
+
+## Tech stack
+
+- Next.js 15 (App Router, Server Components)
+- TypeScript 5 strict
+- Tailwind CSS 4 + custom OKLCH tokens
+- next-intl v4 (App Router i18n)
+- Framer Motion (subtle entrance only)
+- React Leaflet + OpenStreetMap
+- Resend (email backup for booking form)
+- Vercel (hosting + analytics)
+
+## Design system
+
+See [`DESIGN.md`](./DESIGN.md) for the full Tropical Modern design system: colors, fonts, motion, components.
+
+## Project context
+
+See [`AGENTS.md`](./AGENTS.md) for project conventions, hard constraints, and architecture notes.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+cp .env.example .env.local  # fill in RESEND_API_KEY, OWNER_EMAIL, OWNER_WHATSAPP
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 (ID) or http://localhost:3000/en (EN).
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command           | Purpose                      |
+| ----------------- | ---------------------------- |
+| `pnpm dev`        | Start dev server (Turbopack) |
+| `pnpm build`      | Production build             |
+| `pnpm start`      | Run production build         |
+| `pnpm lint`       | ESLint check                 |
+| `pnpm typecheck`  | TypeScript strict check      |
+| `pnpm test`       | Run unit tests (Vitest)      |
+| `pnpm test --run` | Run tests once (no watch)    |
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                # Next.js App Router
+│   ├── [locale]/       # ID/EN routed pages
+│   ├── actions/        # Server Actions
+│   ├── sitemap.ts
+│   └── robots.ts
+├── components/
+│   ├── sections/       # Hero, Story, Bento, Amenities, etc.
+│   └── shared/         # Reusable primitives (Section, Reveal, CtaButton)
+├── data/               # Fictional content (villa, pricing, FAQs, etc.)
+├── i18n/               # next-intl config + message files
+└── lib/                # Utilities (format, validators, whatsapp, email)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable               | Required                               | Purpose                         |
+| ---------------------- | -------------------------------------- | ------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | No (default: `https://mahonihouse.id`) | Used for canonical, OG, sitemap |
+| `RESEND_API_KEY`       | No                                     | Email backup for form           |
+| `OWNER_EMAIL`          | No (default: skip email)               | Where booking emails go         |
+| `OWNER_WHATSAPP`       | No (default: `6281234567890`)          | WhatsApp deep link target       |
 
-## Deploy on Vercel
+The site works without Resend — it just logs "Email service not configured" and the WhatsApp link still generates.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project is configured for Vercel:
+
+1. Push to GitHub
+2. Import repo in Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy
+
+The CI workflow (`.github/workflows/ci.yml`) runs on every PR and main push.
+
+## License
+
+MIT — but please don't use the fictional content (villa name, owner names, pricing) in production.
