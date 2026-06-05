@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "villa": "Villa",
+    "amenities": "Fasilitas",
+    "gallery": "Galeri",
+    "experience": "Aktivitas",
+    "pricing": "Harga",
+    "contact": "Kontak",
+    "book": "Cek Ketersediaan"
+  },
+  "hero": {
+    "eyebrow": "WELCOME TO",
+    "title": "Mahoni House",
+    "tagline": "Tempat keluarga desacelerasi di tepi laut",
+    "sub": "Villa 4-kamar dengan kolam renang pribadi, 5 menit dari Pantai Karapyak",
+    "primaryCta": "Cek Ketersediaan",
+    "secondaryCta": "Lihat cerita kami ↓"
+  },
+  "story": {
+    "eyebrow": "OUR STORY",
+    "signature": "— Asep & Lina, Pemilik & Pengelola"
+  },
+  "villa": {
+    "eyebrow": "THE VILLA",
+    "title": "Ruang yang dibuat untuk bersama"
+  },
+  "amenities": {
+    "eyebrow": "AMENITIES",
+    "title": "Semua yang Anda butuhkan",
+    "alsoIncluded": "Termasuk juga"
+  },
+  "layout": {
+    "eyebrow": "LAYOUT",
+    "title": "Ruang untuk seluruh keluarga",
+    "stats": {
+      "bedrooms": "Kamar Tidur",
+      "guests": "Tamu Maks",
+      "bathrooms": "Kamar Mandi",
+      "area": "Luas Bangunan"
+    },
+    "bedConfig": "Konfigurasi tempat tidur"
+  },
+  "gallery": {
+    "eyebrow": "GALLERY",
+    "title": "Lihat lebih dekat"
+  },
+  "experience": {
+    "eyebrow": "EXPERIENCE",
+    "title": "Lebih dari sekadar villa",
+    "sub": "Hal-hal yang bisa Anda nikmati di sekitar Pangandaran"
+  },
+  "location": {
+    "eyebrow": "LOCATION",
+    "title": "Lokasi",
+    "howToGet": "Cara ke sini",
+    "landmarks": "Landmark terdekat",
+    "directionsCta": "Minta arah via WhatsApp"
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIALS",
+    "title": "Apa kata tamu kami",
+    "disclaimer": "Testimoni dari tamu nyata — untuk demo ini, nama-nama sudah disesuaikan."
+  },
+  "pricing": {
+    "eyebrow": "PRICING",
+    "title": "Tarif menginap",
+    "sub": "Harga per malam, sudah termasuk pajak",
+    "perNight": "/ malam",
+    "includes": "Termasuk",
+    "excludes": "Tidak termasuk",
+    "mostPopular": "PALING POPULER",
+    "bookCta": "Pesan"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Pertanyaan yang sering ditanya"
+  },
+  "booking": {
+    "eyebrow": "BOOK NOW",
+    "title": "Cek ketersediaan",
+    "sub": "Isi form di bawah, kami balas via WhatsApp dalam 1 jam (09.00–21.00 WIB)",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Jumlah tamu",
+    "name": "Nama lengkap",
+    "email": "Email",
+    "phone": "No. WhatsApp",
+    "requests": "Permintaan khusus (opsional)",
+    "agreement": "Saya menyetujui syarat & ketentuan yang berlaku",
+    "submit": "Kirim via WhatsApp",
+    "sending": "Mengirim...",
+    "success": "Terkirim! Cek WhatsApp Anda.",
+    "terms": "syarat & ketentuan"
+  },
+  "footer": {
+    "tagline": "Villa keluarga di pesisir Pangandaran",
+    "quickLinks": "Tautan Cepat",
+    "contact": "Kontak",
+    "copyright": "© 2026 Mahoni House. Portfolio demo project.",
+    "builtWith": "Built with Next.js · Hosted on Vercel"
+  },
+  "langSwitcher": {
+    "label": "Bahasa"
+  }
+}

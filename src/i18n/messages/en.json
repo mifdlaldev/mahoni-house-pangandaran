@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "villa": "Villa",
+    "amenities": "Amenities",
+    "gallery": "Gallery",
+    "experience": "Experience",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "book": "Check Availability"
+  },
+  "hero": {
+    "eyebrow": "WELCOME TO",
+    "title": "Mahoni House",
+    "tagline": "Where family slows down by the sea",
+    "sub": "A four-bedroom villa with a private pool, 5 min from Karapyak Beach",
+    "primaryCta": "Check Availability",
+    "secondaryCta": "Watch our story ↓"
+  },
+  "story": {
+    "eyebrow": "OUR STORY",
+    "signature": "— Asep & Lina, Owners & Hosts"
+  },
+  "villa": {
+    "eyebrow": "THE VILLA",
+    "title": "Spaces made for gathering"
+  },
+  "amenities": {
+    "eyebrow": "AMENITIES",
+    "title": "Everything you need",
+    "alsoIncluded": "Also included"
+  },
+  "layout": {
+    "eyebrow": "LAYOUT",
+    "title": "Room for the whole family",
+    "stats": {
+      "bedrooms": "Bedrooms",
+      "guests": "Max Guests",
+      "bathrooms": "Bathrooms",
+      "area": "Building Area"
+    },
+    "bedConfig": "Bed configuration"
+  },
+  "gallery": {
+    "eyebrow": "GALLERY",
+    "title": "Take a closer look"
+  },
+  "experience": {
+    "eyebrow": "EXPERIENCE",
+    "title": "More than just a villa",
+    "sub": "Things to enjoy around Pangandaran"
+  },
+  "location": {
+    "eyebrow": "LOCATION",
+    "title": "Location",
+    "howToGet": "How to get here",
+    "landmarks": "Nearby landmarks",
+    "directionsCta": "Get directions via WhatsApp"
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIALS",
+    "title": "What our guests say",
+    "disclaimer": "Reviews from real guests — for this demo, names have been adjusted."
+  },
+  "pricing": {
+    "eyebrow": "PRICING",
+    "title": "Stay rates",
+    "sub": "Price per night, tax included",
+    "perNight": "/ night",
+    "includes": "Includes",
+    "excludes": "Excludes",
+    "mostPopular": "MOST POPULAR",
+    "bookCta": "Book"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions"
+  },
+  "booking": {
+    "eyebrow": "BOOK NOW",
+    "title": "Check availability",
+    "sub": "Fill the form below, we'll reply via WhatsApp within 1 hour (09.00–21.00 WIB)",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Guests",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "WhatsApp number",
+    "requests": "Special requests (optional)",
+    "agreement": "I agree to the terms & conditions",
+    "submit": "Send via WhatsApp",
+    "sending": "Sending...",
+    "success": "Sent! Check your WhatsApp.",
+    "terms": "terms & conditions"
+  },
+  "footer": {
+    "tagline": "A family villa on the Pangandaran shore",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "copyright": "© 2026 Mahoni House. Portfolio demo project.",
+    "builtWith": "Built with Next.js · Hosted on Vercel"
+  },
+  "langSwitcher": {
+    "label": "Language"
+  }
+}
