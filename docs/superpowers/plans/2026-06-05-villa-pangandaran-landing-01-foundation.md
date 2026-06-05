@@ -61,17 +61,17 @@ git commit -m "chore: initialize Next.js 14 project"
 ## Task 1.2: Install Dependencies
 
 **Files:**
-- Modify: `package.json`
+- Modify: `package.json`, `pnpm-lock.yaml`
 
 - [ ] **Step 1: Install runtime dependencies**
 
+> Vanilla Tailwind primitives only — no Radix, no shadcn. Accessibility is handled per-component with semantic HTML + `focus-visible:` utilities.
+
 ```bash
-pnpm add next-intl@3 framer-motion@11 react-hook-form@7 zod@3 @hookform/resolvers \
-  @radix-ui/react-accordion @radix-ui/react-dialog @radix-ui/react-label \
-  @radix-ui/react-slot @radix-ui/react-select \
+pnpm add next-intl@^4 framer-motion@^11 react-hook-form@^7 zod@^3 @hookform/resolvers \
   class-variance-authority clsx tailwind-merge \
-  leaflet react-leaflet@4 \
-  date-fns@3 resend @phosphor-icons/react
+  leaflet react-leaflet@^4 \
+  date-fns@^3 resend @phosphor-icons/react
 pnpm add -D @types/leaflet vitest @vitest/ui @testing-library/react @testing-library/jest-dom jsdom \
   prettier prettier-plugin-tailwindcss
 ```
@@ -79,14 +79,14 @@ pnpm add -D @types/leaflet vitest @vitest/ui @testing-library/react @testing-lib
 - [ ] **Step 2: Verify package.json has new deps**
 
 ```bash
-cat package.json | grep -A 30 '"dependencies"'
+cat package.json
 ```
 
-- [ ] **Step 3: Commit**
+- [ ] **Step 3: Commit (subject to user approval)**
 
 ```bash
 git add package.json pnpm-lock.yaml
-git commit -m "chore: add project dependencies"
+git commit -m "chore: add project dependencies (next-intl, framer-motion, RHF, Zod, Phosphor, leaflet, vitest)"
 ```
 
 ---
