@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Lora, Plus_Jakarta_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
 
@@ -18,14 +18,66 @@ const jakarta = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Mahoni House Pangandaran',
-    template: '%s | Mahoni House Pangandaran',
-  },
-  description:
-    'A four-bedroom villa with a private pool on the western shore of Pangandaran. Family-managed.',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'hero' });
+
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mahonihouse.id';
+
+  return {
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: 'Mahoni House Pangandaran — Villa Keluarga 4-Kamar',
+      template: '%s | Mahoni House Pangandaran',
+    },
+    description: t('sub'),
+    keywords: [
+      'villa pangandaran',
+      'sewa villa pangandaran',
+      'villa keluarga pangandaran',
+      'private villa pangandaran',
+      'penginapan pangandaran',
+    ],
+    authors: [{ name: 'Mahoni House' }],
+    openGraph: {
+      type: 'website',
+      locale: locale === 'id' ? 'id_ID' : 'en_US',
+      url: `${baseUrl}/${locale}`,
+      siteName: 'Mahoni House Pangandaran',
+      title: 'Mahoni House Pangandaran',
+      description: t('sub'),
+      images: [
+        {
+          url: '/og.png',
+          width: 1200,
+          height: 630,
+          alt: 'Mahoni House Pangandaran',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Mahoni House Pangandaran',
+      description: t('sub'),
+      images: ['/og.png'],
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        id: `${baseUrl}/id`,
+        en: `${baseUrl}/en`,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
