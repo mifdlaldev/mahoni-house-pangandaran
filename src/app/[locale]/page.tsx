@@ -47,7 +47,7 @@ export default async function HomePage({
       latitude: villaLocation.lat,
       longitude: villaLocation.lng,
     },
-    image: `${baseUrl}/og.png`,
+    image: `${baseUrl}/og.jpg`,
     numberOfRooms: 4,
     petsAllowed: false,
     checkinTime: '14:00',

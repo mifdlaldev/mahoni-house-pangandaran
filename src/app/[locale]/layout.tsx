@@ -52,7 +52,7 @@ export async function generateMetadata({
       description: t('sub'),
       images: [
         {
-          url: '/og.png',
+          url: '/og.jpg',
           width: 1200,
           height: 630,
           alt: 'Mahoni House Pangandaran',
@@ -63,7 +63,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: 'Mahoni House Pangandaran',
       description: t('sub'),
-      images: ['/og.png'],
+      images: ['/og.jpg'],
     },
     alternates: {
       canonical: `${baseUrl}/${locale}`,
