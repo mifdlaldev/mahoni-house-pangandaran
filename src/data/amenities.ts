@@ -9,7 +9,7 @@ export const amenities: readonly Amenity[] = [
       id: 'Kolam 8×4m dengan kedalaman 1.5m, area aman untuk anak',
       en: '8×4m pool, 1.5m depth, kid-safe area',
     },
-    iconName: 'SwimmingPool',
+    iconName: 'Drop',
     category: 'outdoor',
   },
   {
@@ -59,7 +59,7 @@ export const amenities: readonly Amenity[] = [
       id: 'Grill dan meja makan outdoor untuk makan malam bersama',
       en: 'Grill and outdoor dining table for family dinners',
     },
-    iconName: 'Barbecue',
+    iconName: 'ForkKnife',
     category: 'outdoor',
   },
 ] as const;

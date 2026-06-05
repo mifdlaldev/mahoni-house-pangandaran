@@ -3,6 +3,7 @@ import type { FAQItem } from '@/types';
 // FICTIONAL — for portfolio demo only
 export const faqItems: readonly FAQItem[] = [
   {
+    id: 'check-in-out',
     q: { id: 'Jam check-in & check-out berapa?', en: 'What are the check-in and check-out times?' },
     a: {
       id: 'Check-in mulai pukul 14.00 WIB, check-out maksimal pukul 11.00 WIB. Early check-in / late check-out bisa diatur jika tidak ada tamu di hari sebelumnya — konfirmasi via WhatsApp.',
@@ -10,6 +11,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'min-stay',
     q: { id: 'Apakah ada minimum inap?', en: 'Is there a minimum stay?' },
     a: {
       id: 'Ya. 2 malam untuk hari biasa, 3 malam untuk akhir pekan, 5 malam untuk musim liburan (Lebaran, Natal, Jul–Agt).',
@@ -17,6 +19,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'payment',
     q: { id: 'Bagaimana cara pembayaran?', en: 'How do I pay?' },
     a: {
       id: 'DP 50% untuk konfirmasi booking, pelunasan 7 hari sebelum check-in. Transfer bank (BCA/Mandiri) atau e-wallet. Detail dikirim setelah booking dikonfirmasi via WhatsApp.',
@@ -24,6 +27,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'cancellation',
     q: { id: 'Apakah kebijakan pembatalan?', en: 'What is the cancellation policy?' },
     a: {
       id: 'Pembatalan ≥ 14 hari sebelum: refund DP 50%. Pembatalan < 14 hari: DP tidak bisa di-refund. Reschedule gratis jika tersedia tanggal lain.',
@@ -31,6 +35,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'pets',
     q: { id: 'Apakah boleh bawa hewan peliharaan?', en: 'Are pets allowed?' },
     a: {
       id: 'Boleh, maksimal 2 hewan kecil (anjing/kucing, < 10 kg). Biaya tambahan Rp 200.000 per hewan per inap. Taman berpagar untuk keamanan.',
@@ -38,6 +43,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'housekeeping',
     q: { id: 'Apakah ada pembersihan harian?', en: 'Is daily housekeeping included?' },
     a: {
       id: 'Ya, housekeeping datang setiap pagi (kecuali hari Minggu). Ganti handuk & linen setiap 3 hari, atau sesuai permintaan.',
@@ -45,6 +51,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'airport-transfer',
     q: { id: 'Bisakah antar-jemput bandara?', en: 'Do you offer airport transfer?' },
     a: {
       id: 'Kami bisa koordinasi dengan driver lokal terpercaya. Bandara terdekat: Nusawiru (30 min), Bandung Husein (4.5 jam), atau Kertajati (4 jam). Biaya tergantung jarak.',
@@ -52,6 +59,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'kitchen',
     q: { id: 'Apakah dapur benar-benar lengkap?', en: 'Is the kitchen really fully equipped?' },
     a: {
       id: 'Kompor gas, oven, microwave, kulkas besar, rice cooker, blender, pisau & talenan, piring & gelas untuk 12 orang, spices basic. Plus complimentary kopi & teh lokal.',
@@ -59,6 +67,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'pool-safety',
     q: { id: 'Apakah kolam aman untuk anak kecil?', en: 'Is the pool safe for small children?' },
     a: {
       id: 'Kolam 8x4m dengan kedalaman 1.5m. Untuk anak di bawah 5 tahun, harap selalu ada pengawasan orang dewasa. Life jacket tersedia gratis di villa.',
@@ -66,6 +75,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
   {
+    id: 'parking',
     q: { id: 'Apakah tersedia parkir?', en: 'Is parking available?' },
     a: {
       id: 'Ya, parkir dalam villa untuk 2 mobil. Area cukup untuk SUV / minibus.',
@@ -73,3 +83,7 @@ export const faqItems: readonly FAQItem[] = [
     },
   },
 ] as const;
+
+export function getFaqs() {
+  return faqItems;
+}

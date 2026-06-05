@@ -44,6 +44,7 @@ export type Testimonial = {
 };
 
 export type FAQItem = {
+  id: string;
   q: LocalizedString;
   a: LocalizedString;
 };
