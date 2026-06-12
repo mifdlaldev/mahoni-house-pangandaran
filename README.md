@@ -11,6 +11,7 @@
     <img src="https://img.shields.io/badge/i18n-next--intl-FF6B6B?style=flat-square&logo=localize" alt="next-intl"/>
     <img src="https://img.shields.io/badge/Vitest-4.0-6B9F3C?style=flat-square&logo=vitest" alt="Vitest"/>
     <a href="https://github.com/mifdlaldev/Mahoni-House/actions"><img src="https://img.shields.io/github/actions/workflow/status/mifdlaldev/Mahoni-House/ci.yml?branch=main&style=flat-square&logo=githubactions&label=CI" alt="CI Status"/></a>
+    <img src="https://img.shields.io/badge/AI_Assisted-Yes-7B2FF7?style=flat-square&logo=openai" alt="AI Assisted"/>
   </p>
 
   <br/>
@@ -34,7 +35,7 @@
 - [Project Structure](#-project-structure)
 - [Design System](#-design-system)
 - [Security](#-security)
-- [Contributing](#-contributing)
+- [Built with AI Assistance](#-built-with-ai-assistance)
 - [Roadmap](#-roadmap)
 
 ---
@@ -351,43 +352,17 @@ Mahoni-House/
 
 ---
 
-## 🤝 Contributing
+## 🤖 Built with AI Assistance
 
-Contributions are welcome! This project is designed as a portfolio piece and learning resource.
+This project was developed with the help of **AI-powered coding tools** to accelerate development while maintaining high code quality standards. The AI assisted with:
 
-### How to Contribute
+- **Code scaffolding** — Generating boilerplate, data files, and component structure
+- **Code review** — Static analysis, type checking, and best practice suggestions
+- **Debugging** — Identifying and resolving build errors, type issues, and edge cases
+- **Documentation** — README, design system docs, and project context files
+- **Image sourcing** — Finding and optimizing Unsplash photos via automated search
 
-1. **Fork the repository**
-2. **Create a feature branch**:
-   ```bash
-   git checkout -b feat/your-feature-name
-   ```
-3. **Make your changes** following existing patterns:
-   - TypeScript strict mode — no `any`, no `@ts-ignore`
-   - Server Components first; `'use client'` only when needed
-   - Bilingual — all user-facing text must have ID and EN versions
-   - Accessible — proper labels, roles, keyboard support
-4. **Commit with Conventional Commits**:
-   ```bash
-   git commit -m "feat: add your feature"
-   ```
-5. **Push and open a Pull Request**
-
-### Development Guidelines
-
-- **Code Style**: ESLint + Prettier, 2-space indentation, single quotes, trailing commas
-- **Components**: Keep focused; extract shared logic to `src/lib/`
-- **Animations**: Only `transform` and `opacity`; honor `prefers-reduced-motion`
-- **Images**: Optimize with ffmpeg (`scale=1600:-1 -q:v 5`) before committing
-- **Icons**: Use Phosphor React SVG — no emoji as icons
-
-### Ideas for Contributions
-
-- [ ] **E2E tests** — Playwright smoke test for booking flow
-- [ ] **Lighthouse CI** — Automated performance budget checks
-- [ ] **Real availability calendar** — CMS integration
-- [ ] **Payment integration** — Midtrans/Xendit
-- [ ] **PWA support** — Offline access with service worker
+All code was reviewed, tested, and verified before commit — ensuring the same quality standards as hand-written code.
 
 ---
 
