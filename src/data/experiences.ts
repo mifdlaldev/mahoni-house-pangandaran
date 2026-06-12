@@ -10,7 +10,7 @@ export const experiences: readonly Experience[] = [
       en: 'Hidden beach for crowd-free sunset',
     },
     distanceMinutes: 5,
-    image: '/images/experience/karapyak.jpg',
+    image: '/images/gallery/garden.jpg',
   },
   {
     id: 'body-rafting-citumang',
@@ -60,6 +60,6 @@ export const experiences: readonly Experience[] = [
       en: 'Nature reserve with monkeys, apes, and endemic birds',
     },
     distanceMinutes: 15,
-    image: '/images/experience/nature.jpg',
+    image: '/images/gallery/garden.jpg',
   },
 ] as const;

@@ -37,6 +37,11 @@ export const galleryImages = [
     url: '/images/gallery/sunrise.jpg',
     alt: { id: 'Sunrise di teras', en: 'Sunrise from terrace' },
   },
+  {
+    id: 'g9',
+    url: '/images/gallery/bathroom.jpg',
+    alt: { id: 'Kamar mandi dengan bathtub', en: 'Bathroom with bathtub' },
+  },
 ] as const;
 
 export function getGallery() {
