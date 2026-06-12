@@ -96,6 +96,27 @@
     line-height: 1.15;
     font-weight: 500;
   }
+  /* === Custom scrollbar (Webkit) === */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-forest-700);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-forest-900);
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-forest-700) transparent;
+  }
+
   /* Honor reduced motion */
   @media (prefers-reduced-motion: reduce) {
     *,
@@ -107,6 +128,12 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* === Date input icon color === */
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
 }
 
 /* === Layout utilities === */

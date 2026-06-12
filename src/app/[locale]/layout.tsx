@@ -72,6 +72,9 @@ export async function generateMetadata({
         en: `${baseUrl}/en`,
       },
     },
+    icons: {
+      icon: '/favicon.svg',
+    },
     robots: {
       index: true,
       follow: true,

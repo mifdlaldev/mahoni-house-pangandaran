@@ -19,7 +19,7 @@
   },
   "story": {
     "eyebrow": "OUR STORY",
-    "signature": "— Asep & Lina, Pemilik & Pengelola"
+    "signature": "— Justin & Jennifer, Pemilik & Pengelola"
   },
   "villa": {
     "eyebrow": "THE VILLA",
@@ -94,11 +94,11 @@
     "terms": "syarat & ketentuan"
   },
   "footer": {
-    "tagline": "Villa keluarga di pesisir Pangandaran",
+    "tagline": "Villa keluarga 4-kamar dengan kolam renang pribadi di pesisir barat Pangandaran — tempat pagi tropis berpadu dengan suara ombak.",
     "quickLinks": "Tautan Cepat",
     "contact": "Kontak",
-    "copyright": "© 2026 Mahoni House. Portfolio demo project.",
-    "builtWith": "Built with Next.js · Hosted on Vercel"
+    "connect": "Connect",
+    "copyright": "© 2026 Mahoni House. Portfolio demo project."
   },
   "langSwitcher": {
     "label": "Bahasa"

@@ -19,7 +19,7 @@
   },
   "story": {
     "eyebrow": "OUR STORY",
-    "signature": "— Asep & Lina, Owners & Hosts"
+    "signature": "— Justin & Jennifer, Owners & Hosts"
   },
   "villa": {
     "eyebrow": "THE VILLA",
@@ -94,11 +94,11 @@
     "terms": "terms & conditions"
   },
   "footer": {
-    "tagline": "A family villa on the Pangandaran shore",
+    "tagline": "A four-bedroom family villa with a private pool, nestled along Pangandaran's western shore — where tropical mornings meet the sound of waves.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
-    "copyright": "© 2026 Mahoni House. Portfolio demo project.",
-    "builtWith": "Built with Next.js · Hosted on Vercel"
+    "connect": "Connect",
+    "copyright": "© 2026 Mahoni House. Portfolio demo project."
   },
   "langSwitcher": {
     "label": "Language"
