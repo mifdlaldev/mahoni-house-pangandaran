@@ -1,21 +1,25 @@
-MIT License
+All Rights Reserved
 
-Copyright (c) 2026 Mifdlal Tsaqib Alfarras
+Copyright © 2026 Mifdlal Tsaqib Alfarras
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This project is a **personal portfolio piece** created for demonstration purposes only. The villa, owners, pricing, and testimonials depicted are entirely fictional.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Terms
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1. **Viewing and Learning** — You may view, fork, and study this code for personal learning and inspiration.
+
+2. **No Commercial Use** — You may not use this code, in whole or in part, for commercial purposes without explicit written permission from the author.
+
+3. **No Redistribution** — You may not redistribute this code, modified or unmodified, without proper attribution to the original author.
+
+4. **No Claim of Ownership** — You may not claim this work as your own. If used as reference, proper credit must be given.
+
+5. **No Real-World Use** — The fictional villa content (name, pricing, reviews, images) may not be used to represent any real property or business.
+
+## Exceptions
+
+If you wish to use any part of this project for commercial purposes, please contact me at [mifdlaltsaqibalf26@outlook.com](mailto:mifdlaltsaqibalf26@outlook.com) to discuss licensing options.
+
+---
+
+*This license is subject to the laws of Indonesia.*
