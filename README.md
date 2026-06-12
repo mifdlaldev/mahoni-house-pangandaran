@@ -7,14 +7,18 @@
   <p>
     <img src="https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js" alt="Next.js"/>
     <img src="https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript" alt="TypeScript"/>
-    <img src="https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat-square&logo=tailwindcss" alt="Tailwind"/>
+    <img src="https://img.shields.io/badge/Tailwind-v4-06D6D4?style=flat-square&logo=tailwindcss" alt="Tailwind"/>
     <img src="https://img.shields.io/badge/i18n-next--intl-FF6B6B?style=flat-square&logo=localize" alt="next-intl"/>
     <img src="https://img.shields.io/badge/Vitest-4.0-6B9F3C?style=flat-square&logo=vitest" alt="Vitest"/>
     <a href="https://github.com/mifdlaldev/Mahoni-House/actions"><img src="https://img.shields.io/github/actions/workflow/status/mifdlaldev/Mahoni-House/ci.yml?branch=main&style=flat-square&logo=githubactions&label=CI" alt="CI Status"/></a>
-    <img src="https://img.shields.io/badge/AI_Assisted-Yes-7B2FF7?style=flat-square&logo=openai" alt="AI Assisted"/>
+    <img src="https://img.shields.io/badge/deployed-Vercel-000000?style=flat-square&logo=vercel" alt="Vercel"/>
   </p>
 
   <br/>
+  <a href="https://mahoni-house.vercel.app">
+    <img src="https://img.shields.io/badge/Live_Demo-mahoni--house.vercel.app-1f4a3a?style=flat-square&logo=vercel" alt="Live Demo"/>
+  </a>
+  &nbsp;
   <a href="https://github.com/mifdlaldev/Mahoni-House">
     <img src="https://img.shields.io/badge/GitHub-mifdlaldev%2FMahoni--House-181717?style=flat-square&logo=github" alt="GitHub"/>
   </a>
