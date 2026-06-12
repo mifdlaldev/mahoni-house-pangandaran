@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { bookingSchema } from '../booking-validators';
+import { getBookingSchema } from '../booking-validators';
+
+const bookingSchema = getBookingSchema('id');
 
 describe('bookingSchema', () => {
   const validInput = {

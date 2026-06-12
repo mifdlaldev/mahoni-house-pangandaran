@@ -1,6 +1,6 @@
 'use client';
 
-import { useTransition, useState } from 'react';
+import { useTransition, useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/shared/section';
 import { Reveal } from '@/components/shared/reveal';
@@ -10,9 +10,11 @@ export function BookingForm({ locale }: { locale: 'id' | 'en' }) {
   const t = useTranslations('booking');
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
+  const tsRef = useRef(Date.now());
 
   const onSubmit = (formData: FormData) => {
     setError(null);
+    formData.set('_ts', String(tsRef.current));
     startTransition(async () => {
       const result = await submitBooking(formData);
       if (!result.ok) {
@@ -30,29 +32,38 @@ export function BookingForm({ locale }: { locale: 'id' | 'en' }) {
 
   return (
     <Section id="booking" className="bg-forest-900 text-cream-50">
-      <Reveal>
+      <Reveal className="text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-cream-200/70">
           {t('eyebrow')}
         </p>
-        <h2 className="mt-4 max-w-2xl font-display text-4xl leading-[1.1] tracking-tight text-cream-50 text-balance sm:text-5xl">
+        <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl leading-[1.1] tracking-tight text-cream-50 text-balance sm:text-5xl">
           {t('title')}
         </h2>
-        <p className="mt-6 max-w-xl text-lg text-cream-200/80">{t('sub')}</p>
+        <p className="mx-auto mt-6 max-w-xl text-lg text-cream-200/80">{t('sub')}</p>
       </Reveal>
 
       <Reveal delay={120}>
-        <form action={onSubmit} className="mt-12 grid max-w-3xl gap-6" noValidate>
+        <form action={onSubmit} className="mx-auto mt-12 grid max-w-3xl gap-6" noValidate>
           <input type="hidden" name="locale" value={locale} />
+          {/* Honeypot — invisible to humans, bots fill it */}
+          <input
+            type="text"
+            name="website"
+            className="absolute -left-[9999px] -top-[9999px] h-0 w-0 opacity-0"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
           <div className="grid gap-6 sm:grid-cols-2">
             <Field label={t('checkIn')} name="checkIn" type="date" required />
             <Field label={t('checkOut')} name="checkOut" type="date" required />
           </div>
           <Field label={t('guests')} name="guests" type="number" min={1} max={10} defaultValue={4} required />
           <div className="grid gap-6 sm:grid-cols-2">
-            <Field label={t('name')} name="name" type="text" required />
-            <Field label={t('email')} name="email" type="email" required />
+            <Field label={t('name')} name="name" type="text" maxLength={100} required />
+            <Field label={t('email')} name="email" type="email" maxLength={254} required />
           </div>
-          <Field label={t('phone')} name="phone" type="tel" required />
+          <Field label={t('phone')} name="phone" type="tel" maxLength={20} required />
 
           <div>
             <label htmlFor="requests" className="block text-sm font-medium text-cream-200/90">
@@ -62,6 +73,7 @@ export function BookingForm({ locale }: { locale: 'id' | 'en' }) {
               id="requests"
               name="requests"
               rows={4}
+              maxLength={500}
               className="mt-2 w-full rounded-md border border-cream-50/20 bg-forest-800/50 px-4 py-2.5 text-cream-50 placeholder:text-cream-200/40 focus:border-cream-50/50 focus:outline-none focus:ring-1 focus:ring-cream-50/30"
             />
           </div>
@@ -106,6 +118,7 @@ function Field({
   type,
   min,
   max,
+  maxLength,
   defaultValue,
   required,
 }: {
@@ -114,6 +127,7 @@ function Field({
   type: string;
   min?: number;
   max?: number;
+  maxLength?: number;
   defaultValue?: number;
   required?: boolean;
 }) {
@@ -128,6 +142,7 @@ function Field({
         type={type}
         min={min}
         max={max}
+        maxLength={maxLength}
         defaultValue={defaultValue}
         required={required}
         className="mt-2 w-full rounded-md border border-cream-50/20 bg-forest-800/50 px-4 py-2.5 text-cream-50 placeholder:text-cream-200/40 focus:border-cream-50/50 focus:outline-none focus:ring-1 focus:ring-cream-50/30"
