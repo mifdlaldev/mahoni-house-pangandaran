@@ -250,7 +250,7 @@ Psikografi:
 | Button :active     | `scale(0.97)`                        | 100ms    | ease-out    |
 | Link underline     | width 0 → 100%                       | 200ms    | ease-out    |
 | Image hover        | `scale(1.05)` + slight zoom          | 400ms    | ease-out    |
-| Modal open         | `scale(0.95)` + `opacity 0 → 1`      | 250ms    | ease-spring |
+| Modal open         | `scale(0.95)` + `opacity 0 → 1`      | 200ms    | ease-out    |
 
 ### Scroll Reveal
 
