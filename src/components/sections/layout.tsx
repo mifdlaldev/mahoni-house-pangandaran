@@ -54,7 +54,7 @@ export function Layout() {
               <p className="mt-4 text-xs uppercase tracking-wider text-cream-200/60">
                 {t('bedConfig')}
               </p>
-              <p className="mt-1 text-sm text-cream-50/90">{room.beds}</p>
+              <p className="mt-1 text-sm text-cream-50/90">{room.beds[locale]}</p>
             </div>
           </Reveal>
         ))}

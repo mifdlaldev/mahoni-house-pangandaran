@@ -13,9 +13,9 @@ export function Hero() {
         style={{ backgroundImage: 'url(/images/hero-bg.jpg)' }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-900/50 via-forest-900/20 to-forest-900/80" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-forest-900/70 via-forest-900/40 to-forest-900/90 lg:from-forest-900/50 lg:via-forest-900/20 lg:to-forest-900/80" aria-hidden="true" />
 
-      <div className="relative mx-auto flex min-h-dvh max-w-7xl flex-col items-start justify-end px-6 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24">
+      <div className="relative mx-auto flex min-h-dvh max-w-7xl flex-col items-center justify-end px-6 pb-16 pt-32 text-center sm:px-8 lg:items-start lg:text-left lg:pb-24">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.2em] text-cream-200/80">
             {t('eyebrow')}
@@ -37,7 +37,7 @@ export function Hero() {
           </p>
         </Reveal>
         <Reveal delay={480}>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
             <CtaButton href="#booking" variant="primary" size="lg" withArrow>
               {t('primaryCta')}
             </CtaButton>

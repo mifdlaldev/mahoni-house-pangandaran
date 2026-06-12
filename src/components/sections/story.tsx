@@ -18,15 +18,15 @@ export function Story() {
           <div
             className="relative aspect-[4/5] w-full overflow-hidden rounded-lg"
             role="img"
-            aria-label="Asep and Lina, owners of Mahoni House"
+            aria-label="Justin and Jennifer, owners of Mahoni House"
           >
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-left"
               style={{ backgroundImage: 'url(/images/owners.jpg)' }}
               aria-hidden="true"
             />
             <div className="absolute inset-x-0 bottom-0 p-6">
-              <p className="font-display text-2xl text-cream-50 drop-shadow-sm">Asep &amp; Lina</p>
+              <p className="font-display text-2xl text-cream-50 drop-shadow-sm">Justin &amp; Jennifer</p>
               <p className="mt-1 text-sm text-cream-100/85">{t('signature')}</p>
             </div>
           </div>

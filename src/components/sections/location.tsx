@@ -60,14 +60,16 @@ export function Location() {
                 </li>
               ))}
             </ul>
-            <a
-              href={waHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-10 inline-flex min-h-[44px] items-center gap-2 rounded-md bg-forest-700 px-5 py-2.5 text-sm font-medium text-cream-50 transition-colors hover:bg-forest-900 active:scale-[0.97]"
-            >
-              {t('directionsCta')}
-            </a>
+            <div className="sm:flex sm:justify-end">
+              <a
+                href={waHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-10 flex min-h-[44px] w-full items-center justify-center gap-2 rounded-md bg-forest-700 px-5 py-2.5 text-sm font-medium text-cream-50 transition-colors hover:bg-forest-900 active:scale-[0.97] sm:inline-flex sm:w-auto"
+              >
+                {t('directionsCta')}
+              </a>
+            </div>
           </div>
         </Reveal>
       </div>
