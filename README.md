@@ -28,8 +28,30 @@
 
 ---
 
+## 📱 Preview
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./public/images/screenshot-desktop.jpg">
+    <img src="./public/images/screenshot-desktop.jpg" alt="Mahoni House Desktop Preview" width="100%" style="max-width: 1000px; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);" />
+  </picture>
+  <br/>
+  <em>Desktop view — full landing page with 14 sections</em>
+  <br/>
+  <br/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./public/images/screenshot-mobile.jpg">
+    <img src="./public/images/screenshot-mobile.jpg" alt="Mahoni House Mobile Preview" width="375" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);" />
+  </picture>
+  <br/>
+  <em>Mobile view — responsive at 375px</em>
+</div>
+
+---
+
 ## 📋 Table of Contents
 
+- [Preview](#-preview)
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [Tech Stack](#-tech-stack)
